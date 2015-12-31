@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\salas">
+      <UniqueIdentifier>{050a650c-80b6-40f5-8afe-3af9ef804acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\salas">
+      <UniqueIdentifier>{8aa35450-769e-46c8-8b30-2510763a0710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\userInterface">
+      <UniqueIdentifier>{3a0cad15-1c43-40d0-9d6e-c060f43fc081}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\userInterface">
+      <UniqueIdentifier>{b75e5697-4ef1-4126-a625-0328f163d2b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\graficos">
+      <UniqueIdentifier>{ae9cc237-4d7e-4c19-846f-cc7c7a25f6f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graficos">
+      <UniqueIdentifier>{b0260f4e-a17c-4214-8d9e-ebde9ce57e8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\parametros">
+      <UniqueIdentifier>{97c2e704-cbdd-44bf-a61b-157e73bbd744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\parametros">
+      <UniqueIdentifier>{dfb86db0-7a2d-470b-8c09-5088ba809f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\unidades">
+      <UniqueIdentifier>{5f83566f-1e08-43b2-8afe-f6e3df984f18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\unidade">
+      <UniqueIdentifier>{3da94079-35cd-4610-a6e8-5ed9ee159949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\unidades\tripulacao">
+      <UniqueIdentifier>{694375b1-0486-4388-905c-d82de3c42d4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\unidade\tripulacao">
+      <UniqueIdentifier>{7062e1b3-3c80-4a33-87a4-1144ccd5650d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="beliche.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="controloEscudo.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="maquina.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="ponte.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="propulsor.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="sala.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="suporteVida.h">
+      <Filter>Header Files\salas</Filter>
+    </ClInclude>
+    <ClInclude Include="consola.h">
+      <Filter>Header Files\userInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="userInterface.h">
+      <Filter>Header Files\userInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="desenho.h">
+      <Filter>Header Files\graficos</Filter>
+    </ClInclude>
+    <ClInclude Include="jogo.h">
+      <Filter>Header Files\parametros</Filter>
+    </ClInclude>
+    <ClInclude Include="spaceShip.h">
+      <Filter>Header Files\parametros</Filter>
+    </ClInclude>
+    <ClInclude Include="unidade.h">
+      <Filter>Header Files\unidades</Filter>
+    </ClInclude>
+    <ClInclude Include="comando.h">
+      <Filter>Header Files\parametros</Filter>
+    </ClInclude>
+    <ClInclude Include="tripulante.h">
+      <Filter>Header Files\unidades\tripulacao</Filter>
+    </ClInclude>
+    <ClInclude Include="camisaVermelha.h">
+      <Filter>Header Files\unidades\tripulacao</Filter>
+    </ClInclude>
+    <ClInclude Include="capitao.h">
+      <Filter>Header Files\unidades\tripulacao</Filter>
+    </ClInclude>
+    <ClInclude Include="robo.h">
+      <Filter>Header Files\unidades\tripulacao</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="beliche.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="controloEscudo.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="maquina.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="ponte.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="propulsor.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="sala.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="suporteVida.cpp">
+      <Filter>Source Files\salas</Filter>
+    </ClCompile>
+    <ClCompile Include="consola.cpp">
+      <Filter>Source Files\userInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="userInterface.cpp">
+      <Filter>Source Files\userInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="desenho.cpp">
+      <Filter>Source Files\graficos</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jogo.cpp">
+      <Filter>Source Files\parametros</Filter>
+    </ClCompile>
+    <ClCompile Include="spaceShip.cpp">
+      <Filter>Source Files\parametros</Filter>
+    </ClCompile>
+    <ClCompile Include="unidade.cpp">
+      <Filter>Source Files\unidade</Filter>
+    </ClCompile>
+    <ClCompile Include="comando.cpp">
+      <Filter>Source Files\parametros</Filter>
+    </ClCompile>
+    <ClCompile Include="tripulante.cpp">
+      <Filter>Source Files\unidade\tripulacao</Filter>
+    </ClCompile>
+    <ClCompile Include="camisaVermelha.cpp">
+      <Filter>Source Files\unidade\tripulacao</Filter>
+    </ClCompile>
+    <ClCompile Include="capitao.cpp">
+      <Filter>Source Files\unidade\tripulacao</Filter>
+    </ClCompile>
+    <ClCompile Include="robo.cpp">
+      <Filter>Source Files\unidade\tripulacao</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
