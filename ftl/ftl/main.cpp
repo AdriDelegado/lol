@@ -19,7 +19,8 @@ int main(){
 
 void menuPrincipal(){
 	Consola c;
-	c.setTextSize(30, 30);
+	c.setScreenSize(50, 80);
+	c.setTextSize(20, 20);
 	c.setTextColor(c.AZUL_CLARO);
 	c.setBackgroundColor(c.PRETO);
 	c.gotoxy(10, 10);
@@ -41,6 +42,7 @@ void menuPrincipal(){
 				c.clrscr();			//limpa o ecra
 				UserInterface s;
 				s.novoJogo();
+				
 			}
 			if (y == 11){
 				// ABRE OS SETTINGS
@@ -82,6 +84,8 @@ void menuPrincipal(){
 			}
 		}
 	}
+
+
 }
 
 void creditos(){

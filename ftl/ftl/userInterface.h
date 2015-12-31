@@ -35,6 +35,7 @@ public:
 	UserInterface(void);
 	~UserInterface(void);
 
+	void cursor();
 	void novoJogo();
 	void setSalasComuns(SpaceShip &apolo1);
 	void setSalasUtilizador(SpaceShip &apolo1);

@@ -3,6 +3,114 @@
 UserInterface::UserInterface(void){}
 UserInterface::~UserInterface(void){}
 
+void UserInterface::cursor()
+{
+	char tecla;
+
+	int x = 12, y = 5;
+	c.gotoxy(x, y);
+	cout << '>';
+	while (1) {
+		tecla = c.getch();
+		if (tecla == c.ENTER)
+			c.gotoxy(6, 25);
+		if ((tecla != c.ESQUERDA) && (tecla != c.DIREITA) &&
+			(tecla != c.CIMA) && (tecla != c.BAIXO)) continue;
+
+		c.gotoxy(x, y);
+		cout << (char)219;
+
+		if (tecla == c.CIMA)
+		{
+			if (x == 72)
+			{
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 12 && y == 17)
+			{
+				y = 5;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (y == 5){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				y = 17;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				y = y - 6;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+		if (tecla == c.BAIXO)
+		{
+			if (x == 72)
+			{
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 12 && y == 5)
+			{
+				y = 17;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (y == 17){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				y = 5;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				y = y + 6;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+		if (tecla == c.ESQUERDA)
+		{
+			if (x == 27 && y == 11)
+			{
+				x = 72;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 12){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				x = 57;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				x = x - 15;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+
+		if (tecla == c.DIREITA)
+		{
+			if (x == 72 && y == 11)
+			{
+				x = 27;;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 57 && y != 11){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				x = 12;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				x = x + 15;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+
+	}
+}
+
 void UserInterface::novoJogo(){
 	//comando ordem; //verificar se vamos ter comandos para alem de andar de Sala em Sala 
 	
@@ -18,18 +126,18 @@ void UserInterface::novoJogo(){
 	treeOfLife.DesenhoLimitesNave();
 	treeOfLife.DesenhoPortas();
 	treeOfLife.DesenhoSala();
+	cursor();
 	setSalasComuns(apolo1); // as Salas iniciasi da nave
-	c.gotoxy(6, 25); // posicçao da introduçao dos camndos
-	
+	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
 	c.setTextColor(c.AZUL);
 	c.setBackgroundColor(c.PRETO);
 	
 	setSalasUtilizador(apolo1);  // funçao para o utilizador por as Salas
 	c.setTextColor(c.AZUL);
 	c.setBackgroundColor(c.PRETO);
-	c.gotoxy(6, 25); // posicçao da introduçao dos camndos
-	cout << "                                                               ";
-	c.gotoxy(6, 25); // posicçao da introduçao dos camndos
+	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
+	//cout << "                                                               ";
+	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
 
 	setTripulantesUtilizador(apolo1);
 	
