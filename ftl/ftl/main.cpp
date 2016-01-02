@@ -200,4 +200,5 @@ int settings()
 				}
 			}
 		}	
+	return dificuldade;
 }

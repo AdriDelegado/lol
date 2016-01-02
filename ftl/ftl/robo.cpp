@@ -1,13 +1,21 @@
 #include "Robo.h"
 
 
-Robo::Robo() : Tripulante(8, 0, 3, false, 2, false, 0, "X34-ZT2"){
+Robo::Robo() : Tripulante(8, 0, 3, false, 2, false, 0, "X34-ZT2", 3){
 
 }
 
 Robo::~Robo(){}
 
 //------GET---------
+int Robo::getId()
+{
+	return this->id;
+}
+int Robo::getIdSala()
+{
+	return this->idSala;
+}
 
 string Robo::getNome(){
 	return this->nome;
@@ -35,8 +43,17 @@ int Robo::getLocalizacao(){
 	return this->localizacao;
 }
 //------SET---------
+
+void Robo::setId(int id)
+{
+	this->id = id;
+}
+void Robo::setIdSala(int NidSala)
+{
+	this->idSala = NidSala;
+}
 void Robo::setHp(int newHP){
-	this->hp = hp;
+	this->hp = newHP;
 }
 
 void Robo::setReparador(int reparador){
