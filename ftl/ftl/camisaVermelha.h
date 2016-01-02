@@ -17,7 +17,9 @@ class CamisaVermelha : public Tripulante{
 
 	//------GET---------
 
-	int getHP() = 0;
+	int getId();
+	int getIdSala();
+	int getHP();
 	string getNome();
 	 int getReparador() ;
 	 int getCombatente();
@@ -26,6 +28,8 @@ class CamisaVermelha : public Tripulante{
 	bool getRespira();
 	int getLocalizacao();
 	//------SET---------
+	void setId(int id);
+	void setIdSala(int NidSala);
 	void setHp(int newHP);
 	void setReparador(int reparador);
 	void setCombatente(int combatente) ;

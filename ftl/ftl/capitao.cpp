@@ -1,14 +1,21 @@
 #include "capitao.h"
 
 
-Capitao::Capitao() : Tripulante(6, 1, 2, true, 1, true, 0, "Captao"){
+Capitao::Capitao() : Tripulante(6, 1, 2, true, 1, true, 0, "Capitao", 1){
 
 }
 
 Capitao::~Capitao(){}
 
 //------GET---------
-
+int Capitao::getId()
+{
+	return this->id;
+}
+int Capitao::getIdSala()
+{
+	return this->idSala;
+}
 string Capitao::getNome(){
 	return this->nome;
 }
@@ -34,8 +41,12 @@ int Capitao::getLocalizacao(){
 	return this->localizacao;
 }
 //------SET---------
+void Capitao::setIdSala(int NidSala)
+{
+	this->idSala = NidSala;
+}
 void Capitao::setHp(int newHP){
-	this->hp = hp;
+	this->hp = newHP;
 }
 
 void Capitao::setReparador(int reparador){

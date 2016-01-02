@@ -16,8 +16,9 @@ public:
 	~Robo();
 
 	//------GET---------
-
-	int getHP() = 0;
+	int getId();
+	int getIdSala();
+	int getHP();
 	string getNome();
 	int getReparador();
 	int getCombatente();
@@ -26,6 +27,8 @@ public:
 	bool getRespira();
 	int getLocalizacao();
 	//------SET---------
+	void setId(int id);
+	void setIdSala(int NidSala);
 	void setHp(int newHP);
 	void setReparador(int reparador);
 	void setCombatente(int combatente);

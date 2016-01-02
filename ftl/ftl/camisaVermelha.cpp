@@ -1,12 +1,21 @@
 #include "camisaVermelha.h"
 
 
-CamisaVermelha::CamisaVermelha() : Tripulante(5, 1, 1, true, 0, true, 0,"Camisa Vermelha"){}
+CamisaVermelha::CamisaVermelha() : Tripulante(5, 1, 1, true, 0, true, 0,"Camisa Vermelha", 2){}
 
 CamisaVermelha::~CamisaVermelha(){}
 
 
 		//------GET---------
+int CamisaVermelha::getId()
+{
+	return this->id;
+}
+
+int CamisaVermelha::getIdSala()
+{
+	return this->idSala;
+}
 string CamisaVermelha::getNome(){
 	return this->nome;
 }
@@ -33,8 +42,16 @@ int CamisaVermelha::getLocalizacao(){
 	return this->localizacao;
 }
 		//------SET---------
+void CamisaVermelha::setId(int id)
+{
+	this->id = id;
+}
+void CamisaVermelha::setIdSala(int NidSala)
+{
+	this->idSala = NidSala;
+}
 void CamisaVermelha::setHp(int newHP){
-	this->hp = hp;
+	this->hp = newHP;
 }
 
 void CamisaVermelha::setReparador(int reparador){
