@@ -128,14 +128,22 @@ int settings()
 	Consola c;
 	char tecla;
 	int dificuldade;
-
+	
 	c.gotoxy(10, 10);
+	cout << "DIFICULDADE";
+	c.gotoxy(15, 10);
 	cout << "EASY";
-	c.gotoxy(10, 11);
+	c.gotoxy(20, 10);
 	cout << "NORMAL";
-	c.gotoxy(10, 12);
+	c.gotoxy(25, 10);
 	cout << "HARD" << endl;
-	c.gotoxy(10, 19);
+	c.gotoxy(10, 15);
+	cout << "Musica";
+	c.gotoxy(15, 15);
+	cout << "ON";
+	c.gotoxy(15, 20);
+	cout << "OFF";
+	c.gotoxy(10, 30);
 	cout << "PRIMA ESC PARA VOLTAR";
 	int x = 7, y = 10;
 	c.gotoxy(x, y);
@@ -150,11 +158,32 @@ int settings()
 				menuPrincipal();
 
 			}
-			if (tecla == c.ENTER){
-				if (y == 10){
-					dificuldade = 1;
-					c.clrscr();			//limpa o ecra
-					menuPrincipal();
+			if (tecla == c.ENTER)
+			{
+				if (y == 10)
+				{
+					while (tecla != c.ENTER || tecla != c.ESCAPE)
+					{
+						if (tecla)
+						if (x == 15)
+						{
+							dificuldade = 1;
+							c.gotoxy(7, 10);
+						}
+
+						if (x == 20)
+						{
+							dificuldade = 2;
+							c.gotoxy(7, 10);
+						}
+
+						if (x == 25)
+						{
+							dificuldade = 3;
+							c.gotoxy(7, 10);
+						}
+					}
+					
 
 				}
 				if (y == 11){
