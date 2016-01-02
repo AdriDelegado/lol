@@ -10,6 +10,7 @@ using namespace std;
 
 void menuPrincipal();
 void creditos();
+int settings();
 //void iniciarJogo();
 
 int main(){
@@ -19,6 +20,7 @@ int main(){
 
 void menuPrincipal(){
 	Consola c;
+	int dificuldade; //valor para agarrar a dificuldade seleccionada, deve ser preciso meter em kel classe
 	c.setScreenSize(50, 80);
 	c.setTextSize(20, 20);
 	c.setTextColor(c.AZUL_CLARO);
@@ -45,7 +47,9 @@ void menuPrincipal(){
 				
 			}
 			if (y == 11){
-				// ABRE OS SETTINGS
+				c.clrscr();
+				dificuldade = settings();
+				menuPrincipal();
 			}
 			if (y == 12){
 				c.clrscr();			//limpa o ecra
@@ -103,7 +107,7 @@ void creditos(){
 	c.gotoxy(10, 16);
 	cout << "NOME: NUNO CURADO";
 	c.gotoxy(10, 17);
-	cout << "NUM_ALUNO: ????????";
+	cout << "NUM_ALUNO: 21210595";
 
 	c.gotoxy(10, 19);
 	cout << "PRIMA ESC PARA VOLTAR";
@@ -117,4 +121,83 @@ void creditos(){
 		}
 	}
 
+}
+
+int settings()
+{
+	Consola c;
+	char tecla;
+	int dificuldade;
+
+	c.gotoxy(10, 10);
+	cout << "EASY";
+	c.gotoxy(10, 11);
+	cout << "NORMAL";
+	c.gotoxy(10, 12);
+	cout << "HARD" << endl;
+	c.gotoxy(10, 19);
+	cout << "PRIMA ESC PARA VOLTAR";
+	int x = 7, y = 10;
+	c.gotoxy(x, y);
+	cout << '>';
+
+	while (1){
+
+			tecla = c.getch();
+			if (tecla == c.ESCAPE)
+			{
+				c.clrscr();
+				menuPrincipal();
+
+			}
+			if (tecla == c.ENTER){
+				if (y == 10){
+					dificuldade = 1;
+					c.clrscr();			//limpa o ecra
+					menuPrincipal();
+
+				}
+				if (y == 11){
+					dificuldade = 2;
+					c.clrscr();			//limpa o ecra
+					menuPrincipal();
+				}
+				if (y == 12){
+					dificuldade = 3;
+					c.clrscr();			//limpa o ecra
+					menuPrincipal();
+				}
+
+			}
+			if ((tecla != c.ESQUERDA) && (tecla != c.DIREITA) &&
+				(tecla != c.CIMA) && (tecla != c.BAIXO)) continue;
+
+			c.gotoxy(x, y);
+			cout << ' ';
+
+			if (tecla == c.CIMA){
+				y--;
+				if (y == 9){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+					y = 12;
+					c.gotoxy(x, y);
+					cout << '>';
+				}
+				else{
+					c.gotoxy(x, y);
+					cout << '>';
+				}
+			}
+			if (tecla == c.BAIXO){
+				y++;
+				if (y == 13){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+					y = 10;
+					c.gotoxy(x, y);
+					cout << '>';
+				}
+				else{
+					c.gotoxy(x, y);
+					cout << '>';
+				}
+			}
+		}	
 }
