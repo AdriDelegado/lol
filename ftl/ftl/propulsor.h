@@ -12,8 +12,7 @@ class Propulsor : public Sala
 {
 	int nivelPropulsor;
 public:
-	Propulsor(string nome, int nPropulsor, int id);	//contrutor
-	Propulsor();				//contrutor por defeito
+	Propulsor(int id, string nome, int posicao, int x, int y);				//contrutor por defeito
 	~Propulsor(void);			//destrutor
 
 	//------GET---------
@@ -35,6 +34,7 @@ public:
 	int getX();
 	int getY();
 	string getNome();
+	int getPosicao();
 	//------SET---------
 	void setId(int id);
 	void setOxigenio(int newOxigenio);
@@ -46,6 +46,7 @@ public:
 	void setX(int x);
 	void setY(int y);
 	void setNome(string nome);
+	void setPosicao(int newPosicao);
 };
 
 

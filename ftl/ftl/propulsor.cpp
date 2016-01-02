@@ -1,10 +1,10 @@
 #include "Propulsor.h"
 
-Propulsor::Propulsor(string nome, int nPropulsor, int id) :Sala(id, nome){	//contrutor
+Propulsor::Propulsor(int id, string nome, int posicao, int x, int y) :Sala(id, nome, posicao, x, y){	//contrutor
 
-	this->nivelPropulsor = nPropulsor;
+	this->nivelPropulsor = 100;
 }
-Propulsor::Propulsor(){}				//contrutor por defeito
+
 Propulsor::~Propulsor(void){}			//destrutor
 
 int Propulsor::getNivelPropulsor(){
@@ -46,6 +46,9 @@ int Propulsor::getY() {
 string Propulsor::getNome() {
 	return this->nome;
 }
+int Propulsor::getPosicao(){
+	return this->posicao;
+}
 //------SET---------
 void Propulsor::setId(int id){
 	this->id = id;
@@ -65,7 +68,7 @@ void Propulsor::setBrecha(bool newValorBrecha){
 void Propulsor::setFogo(bool newValorFogo){
 	this->fogo = newValorFogo;
 }
-void Propulsor::setCurtoCircuito(bool newValorCurtoCircuito){  // o que é cc ?
+void Propulsor::setCurtoCircuito(bool newValorCurtoCircuito){  
 	this->curtoCircuito = newValorCurtoCircuito;
 }
 void Propulsor::setX(int x) {
@@ -77,4 +80,7 @@ void Propulsor::setY(int y) {
 }
 void Propulsor::setNome(string nome){
 	this->nome = nome;
+}
+void Propulsor::setPosicao(int newPosicao){
+	this->posicao = newPosicao;
 }

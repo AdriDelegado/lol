@@ -8,8 +8,9 @@ using namespace std;
 class Comando
 {
 	string arg1, arg2, arg3, arg4, arg5;
+	
 public:
-	Comando(string arg1, string arg2, string arg3, string arg4, string arg5);
+	Comando(string arg1, string arg2, string arg3, string arg4);
 	Comando();
 	void setArg1(string sub);
 	void setArg2(string sub);

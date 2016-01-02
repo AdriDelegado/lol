@@ -17,12 +17,12 @@ class CamisaVermelha : public Tripulante{
 
 	//------GET---------
 
-	int getHP() = 0;
+	int getHP();
 	string getNome();
-	 int getReparador() ;
-	 int getCombatente();
-	 bool getOperador() ;
-	 int getExoesqueleto();
+	int getReparador() ;
+	int getCombatente();
+	bool getOperador() ;
+	int getExoesqueleto();
 	bool getRespira();
 	int getLocalizacao();
 	//------SET---------

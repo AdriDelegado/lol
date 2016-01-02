@@ -1,13 +1,12 @@
 #include "SuporteVida.h"
 
-SuporteVida::SuporteVida(string nome, int id) : Sala(id, nome){}		// contrutor
-SuporteVida::SuporteVida(){}				//contrutor por defeito
+SuporteVida::SuporteVida(int id, string nome, int posicao, int x, int y) : Sala(id, nome, posicao, x, y){}		// contrutor
 SuporteVida::~SuporteVida(void){}			//destrutor
 
 
 //------GET---------
 int SuporteVida::getId(void){
-	return id;
+	return this->id;
 }
 int SuporteVida::getOxigenio(){
 	return this->oxigenio;
@@ -24,18 +23,20 @@ bool SuporteVida::getBrecha(){
 bool SuporteVida::getFogo(){
 	return this->fogo;
 }
-bool SuporteVida::getCurtoCircuito(){  // o que é cc ?
+bool SuporteVida::getCurtoCircuito(){ 
 	return this->curtoCircuito;
 }
 int SuporteVida::getX() {
 	return this->x;
 }
-
 int SuporteVida::getY() {
 	return this->y;
 }
 string SuporteVida::getNome() {
 	return this->nome;
+}
+int SuporteVida::getPosicao(){
+	return this->posicao;
 }
 //------SET---------
 void SuporteVida::setId(int id){
@@ -68,4 +69,7 @@ void SuporteVida::setY(int y) {
 }
 void SuporteVida::setNome(string nome){
 	this->nome = nome;
+}
+void SuporteVida::setPosicao(int newPosicao){
+	this->posicao = posicao;
 }

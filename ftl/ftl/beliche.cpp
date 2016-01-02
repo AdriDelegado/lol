@@ -1,12 +1,8 @@
 #include "Beliche.h"
 
-Beliche::Beliche(string nome,int id) : Sala(id, nome){			//contrutor
-	this->nome = nome;
+Beliche::Beliche(int id,string nome,int posicao,int x,int y) : Sala(id, nome, posicao, x, y){			//contrutor
 	this->numeroBeliches = 0;
 	
-}
-
-Beliche::Beliche(){						//construtor por defeito
 }
 
 Beliche::~Beliche(void){}				//destrutor
@@ -56,6 +52,9 @@ int Beliche::getY() {
 string Beliche::getNome() {
 	return this->nome;
 }
+int Beliche::getPosicao(){
+	return this->posicao;
+}
 //------SET---------
 void Beliche::setId(int id){
 	this->id = id;
@@ -87,4 +86,7 @@ void Beliche::setY(int y) {
 }
 void Beliche::setNome(string nome){
 	this->nome = nome;
+}
+void Beliche::setPosicao(int newPosicao){
+	this->posicao = newPosicao;
 }

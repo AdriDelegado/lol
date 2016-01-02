@@ -11,8 +11,8 @@ using namespace std;
 class SuporteVida : public Sala
 {
 public:
-	SuporteVida(string nome, int id);		// contrutor
-	SuporteVida();				//contrutor por defeito
+
+	SuporteVida(int id, string nome, int posicao, int x, int y);				//contrutor por defeito
 	~SuporteVida(void);			//destrutor
 
 	//------GET---------
@@ -26,6 +26,7 @@ public:
 	int getX();
 	int getY();
 	string getNome();
+	int getPosicao();
 	//------SET---------
 	void setId(int id);
 	void setOxigenio(int newOxigenio);
@@ -37,6 +38,7 @@ public:
 	void setX(int x);
 	void setY(int y);
 	void setNome(string nome);
+	void setPosicao(int newPosicao);
 };
 
 

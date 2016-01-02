@@ -3,7 +3,7 @@
 UserInterface::UserInterface(void){}
 UserInterface::~UserInterface(void){}
 
-void UserInterface::cursor()
+void UserInterface::cursorSetTripulante()
 {
 	char tecla;
 
@@ -110,7 +110,113 @@ void UserInterface::cursor()
 
 	}
 }
+void UserInterface::cursorSetSala()
+{
+	char tecla;
 
+	int x = 12, y = 5;
+	c.gotoxy(x, y);
+	cout << '>';
+	while (1) {
+		tecla = c.getch();
+		if (tecla == c.ENTER)
+			c.gotoxy(6, 25);
+		if ((tecla != c.ESQUERDA) && (tecla != c.DIREITA) &&
+			(tecla != c.CIMA) && (tecla != c.BAIXO)) continue;
+
+		c.gotoxy(x, y);
+		cout << (char)219;
+
+		if (tecla == c.CIMA)
+		{
+			if (x == 72)
+			{
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 12 && y == 17)
+			{
+				y = 5;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (y == 5){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				y = 17;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				y = y - 6;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+		if (tecla == c.BAIXO)
+		{
+			if (x == 72)
+			{
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 12 && y == 5)
+			{
+				y = 17;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (y == 17){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				y = 5;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				y = y + 6;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+		if (tecla == c.ESQUERDA)
+		{
+			if (x == 27 && y == 11)
+			{
+				x = 72;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 12){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				x = 57;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				x = x - 15;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+
+		if (tecla == c.DIREITA)
+		{
+			if (x == 72 && y == 11)
+			{
+				x = 27;;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else if (x == 57 && y != 11){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				x = 12;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+			else{
+				x = x + 15;
+				c.gotoxy(x, y);
+				cout << '>';
+			}
+		}
+
+	}
+}
 void UserInterface::novoJogo(){
 	//comando ordem; //verificar se vamos ter comandos para alem de andar de Sala em Sala 
 	
@@ -118,15 +224,12 @@ void UserInterface::novoJogo(){
 	int flag = 0;
 	//	nave SpaceShip;		//aqui ja tem as Salas
 	Desenho treeOfLife;
-	c.setBackgroundColor(c.PRETO);
-	//c.setTextSize(10, 10);
-	c.setScreenSize(600, 600);
 	treeOfLife.DesenhoLimitesComandos();
 	treeOfLife.DesenhoLimitesInfo();
 	treeOfLife.DesenhoLimitesNave();
 	treeOfLife.DesenhoPortas();
 	treeOfLife.DesenhoSala();
-	cursor();
+	
 	setSalasComuns(apolo1); // as Salas iniciasi da nave
 	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
 	c.setTextColor(c.AZUL);
@@ -141,12 +244,6 @@ void UserInterface::novoJogo(){
 
 	setTripulantesUtilizador(apolo1);
 	
-
-
-	
-	
-	/*c.setTextColor(c.AZUL);
-	c.setBackgroundColor(c.PRETO);*/
 	
 	
 	//setNivelDificuldade(); // função para por os parametros do Jogo
@@ -180,23 +277,23 @@ void UserInterface::setSalasComuns(SpaceShip &apolo1){
 	
 
 	
-	Propulsor *SalaPropE = new Propulsor("Porpulsor E", 100, 1);
+	Propulsor *SalaPropE = new Propulsor(1,"Porpulsor E",1,5,3);
 	
 	apolo1.setRooms(*SalaPropE);
 
-	Maquina *SalaMaquinas = new Maquina("Maquinas", 5);
+	Maquina *SalaMaquinas = new Maquina(5,"Maquinas",5,20, 9);
 	apolo1.setRooms(*SalaMaquinas);
 
-	SuporteVida *SalaSuportVida = new SuporteVida("Suporte de Vida", 6);
+	SuporteVida *SalaSuportVida = new SuporteVida(6,"Suporte de Vida", 6,35,9);
 	apolo1.setRooms(*SalaSuportVida);
 	
-	ControloEscudo *SalaControlo = new ControloEscudo("Controlo de Escudos", 100, 100, 7);
+	ControloEscudo *SalaControlo = new ControloEscudo(7,"Controlo de Escudos",7,50,9);
 	apolo1.setRooms(*SalaControlo);
 	
-	Ponte *SalaPonte = new Ponte("Ponte", 8);
+	Ponte *SalaPonte = new Ponte(8,"Ponte", 8,65,9);
 	apolo1.setRooms(*SalaPonte);
 
-	Propulsor *SalaPropD = new Propulsor("Propulsor D", 100, 9);
+	Propulsor *SalaPropD = new Propulsor(9,"Propulsor D", 9,5,15);
 	apolo1.setRooms(*SalaPropD);
 
 
@@ -204,6 +301,7 @@ void UserInterface::setSalasComuns(SpaceShip &apolo1){
 }
 void  UserInterface::setSalasUtilizador(SpaceShip &apolo1){
 	string comando;
+	cursor();
 	c.gotoxy(6, 23); // posicçao da info para introzur
 	cout << "Introduza Salas";
 	c.gotoxy(6, 25); // posicçao da introduçao dos camandos

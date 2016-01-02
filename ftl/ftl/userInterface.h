@@ -46,6 +46,8 @@ public:
 	void separaComando(string & comando, Comando & comObj);
 	void verificaComando(Comando &comObj, SpaceShip &apolo1, int verifica);
 	int getCodeComando(Comando &comObj);
+	void cursorSetTripulante();
+	void cursorSetSala();
 	/*void separaComando(string & comando, Comando & comObj);
 	void trataComando(Comando & comObj, Territorio & m, vector <Populacao*> & pop);*/
 };

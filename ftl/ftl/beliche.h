@@ -13,8 +13,7 @@ class Beliche : public Sala
 	int numeroBeliches;
 
 public:
-	Beliche(string nome, int id);			//contrutor
-	Beliche();						//construtor por defeito
+	Beliche(int id, string nome, int posicao, int x, int y);						//construtor por defeito
 	~Beliche(void);					//destrutor
 
 	//------GET---------
@@ -35,6 +34,7 @@ public:
 	int getX();
 	int getY();
 	string getNome();
+	int getPosicao();
 	//------SET---------
 	void setId(int id);
 	void setOxigenio(int newOxigenio);
@@ -46,6 +46,7 @@ public:
 	void setX(int x);
 	void setY(int y);
 	void setNome(string nome);
+	void setPosicao(int newPosicao);
 };
 
 

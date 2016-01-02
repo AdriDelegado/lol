@@ -1,7 +1,6 @@
 #include"Ponte.h"
 
-Ponte::Ponte(string nome, int id) :Sala(id, nome){}			//contrutor
-Ponte::Ponte(){}				//contrutor por defeito
+Ponte::Ponte(int id, string nome, int posicao, int x, int y) :Sala(id, nome, posicao, x, y){}			//contrutor
 Ponte::~Ponte(void){}			//destrutor
 
 //------GET---------
@@ -36,6 +35,9 @@ int Ponte::getY() {
 string Ponte::getNome() {
 	return this->nome;
 }
+int Ponte::getPosicao(){
+	return this->posicao;
+}
 //------SET---------
 void Ponte::setId(int id){
 	this->id = id;
@@ -67,4 +69,7 @@ void Ponte::setY(int y) {
 }
 void Ponte::setNome(string nome){
 	this->nome = nome;
+}
+void Ponte::setPosicao(int newPosicao){
+	this->posicao = posicao;
 }

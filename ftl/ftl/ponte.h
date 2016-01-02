@@ -12,8 +12,7 @@ class Ponte : public Sala
 {
 
 public:
-	Ponte(string nome, int id);			//contrutor
-	Ponte();				//contrutor por defeito
+	Ponte(int id, string nome, int posicao, int x, int y);				//contrutor por defeito
 	~Ponte(void);			//destrutor
 
 	//------GET---------
@@ -27,6 +26,7 @@ public:
 	int getX();
 	int getY();
 	string getNome();
+	int getPosicao();
 	//------SET---------
 	void setId(int id);
 	void setOxigenio(int newOxigenio);
@@ -38,6 +38,7 @@ public:
 	void setX(int x);
 	void setY(int y);
 	void setNome(string nome);
+	void setPosicao(int newPosicao);
 };
 
 

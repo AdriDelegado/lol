@@ -1,12 +1,11 @@
 #include "ControloEscudo.h"
 
-ControloEscudo::ControloEscudo(string nome,int nEscudo, int nEscudoActual, int id) : Sala(id, nome){		//contrutor
-	this->nivelEscudo = nEscudo;
-	this->nivelEscudoActual = nEscudoActual;
+ControloEscudo::ControloEscudo(int id, string nome, int posicao, int x, int y) : Sala(id, nome, posicao, x, y){		//contrutor
+	this->nivelEscudo = 100;
+	this->nivelEscudoActual = 100;
 	
 }
 
-ControloEscudo::ControloEscudo(void){}									//construtor por defeito
 ControloEscudo::~ControloEscudo(void){}								//destrutor
 
 //-------------GET-------------------------
@@ -60,6 +59,9 @@ int ControloEscudo::getY() {
 string ControloEscudo::getNome() {
 	return this->nome;
 }
+int ControloEscudo::getPosicao(){
+	return this->posicao;
+}
 //------SET---------
 void ControloEscudo::setId(int id){
 	this->id = id;
@@ -91,4 +93,7 @@ void ControloEscudo::setY(int y) {
 }
 void ControloEscudo::setNome(string nome){
 	this->nome = nome;
+}
+void ControloEscudo::setPosicao(int newPosicao){
+	this->posicao = newPosicao;
 }

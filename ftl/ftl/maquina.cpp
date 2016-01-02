@@ -1,8 +1,8 @@
 #include "Maquina.h"
 
-Maquina::Maquina(string nome, int id) : Sala(id, nome){	}	//contrutor
+Maquina::Maquina(int id, string nome, int posicao, int x, int y) : Sala(id, nome, posicao, x, y){	}	//contrutor
 
-Maquina::Maquina(){}						//contrutor por defeito
+
 Maquina::~Maquina(void){}					//destrutor
 
 //------GET---------
@@ -37,6 +37,9 @@ int Maquina::getY() {
 string Maquina::getNome() {
 	return this->nome;
 }
+int Maquina::getPosicao(){
+	return this->posicao;
+}
 //------SET---------
 void Maquina::setId(int id){
 	this->id = id;
@@ -68,4 +71,8 @@ void Maquina::setY(int y) {
 }
 void Maquina::setNome(string nome){
 	this->nome = nome;
+}
+void Maquina::setPosicao(int newPosicao){
+	this->posicao = newPosicao;
+
 }

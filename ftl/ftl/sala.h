@@ -16,6 +16,7 @@ protected:
 	int y;
 	string nome;
 	int id;
+	int posicao;
 	int oxigenio;
 	int integridade;
 	bool brecha;
@@ -26,7 +27,7 @@ protected:
 
 
 public:
-	Sala(int id, string nome);
+	Sala(int id, string nome, int posicao, int x, int y);
 	Sala();
 	virtual ~Sala(void);
 
@@ -42,6 +43,7 @@ public:
 	virtual int getX() = 0;
 	virtual int getY() = 0;
 	virtual string getNome() = 0;
+	virtual int getPosicao() = 0;
 	//------SET---------
 	virtual void setId(int id) = 0;
 	virtual void setOxigenio(int newOxigenio) = 0;
@@ -53,7 +55,7 @@ public:
 	virtual void setX(int x) = 0;
 	virtual void setY(int y) = 0;
 	virtual void setNome(string nome) = 0;
-
+	virtual void setPosicao(int newPosicao) = 0;
 	
 };
 
