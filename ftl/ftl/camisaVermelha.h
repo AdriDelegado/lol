@@ -17,11 +17,9 @@ class CamisaVermelha : public Tripulante{
 
 	//------GET---------
 
-<<<<<<< HEAD
-=======
 	int getId();
 	int getIdSala();
->>>>>>> origin/master
+
 	int getHP();
 	string getNome();
 	int getReparador() ;

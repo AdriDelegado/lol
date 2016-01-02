@@ -26,6 +26,7 @@ public:
 	int getIdSala();
 	int getHP();
 	string getNome();
+
 	virtual int getReparador() = 0;
 	virtual int getCombatente() = 0;
 	virtual bool getOperador() = 0;
@@ -37,6 +38,7 @@ public:
 	void setIdSala(int NidSala);
 	void setNome(string nome);
 	void setHP(int hp);
+
 	virtual void setReparador(int reparador) = 0;
 	virtual void setCombatente(int combatente) = 0;
 	virtual void setOperador(bool operador) = 0;

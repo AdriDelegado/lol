@@ -21,7 +21,7 @@ int main(){
 void menuPrincipal(){
 	Consola c;
 	int dificuldade; //valor para agarrar a dificuldade seleccionada, deve ser preciso meter em kel classe
-	c.setScreenSize(50, 80);
+	c.setScreenSize(400, 400);
 	c.setTextSize(20, 20);
 	c.setTextColor(c.AZUL_CLARO);
 	c.setBackgroundColor(c.PRETO);

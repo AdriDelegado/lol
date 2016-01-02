@@ -1,5 +1,5 @@
 #include "jogo.h"
-#include "spaceShip.h"
+
 
 
 jogo::jogo(){};
@@ -44,11 +44,11 @@ void jogo::calculaMilhasActual(int NmilhasActuais, int propD, int propE)
 
 bool jogo::VerificaFimJogo(SpaceShip &nave)
 {
-	if (this->milhasActuais == this->milhasIniciais) //acaba jogo
+	if (getMilhasActuais() == getMilhasIniciais()) //acaba jogo
 		return true;
 	for (int i = 0; i != nave.getRooms().size(); i++)
 	{
-		if (nave.getRooms().at(i)->getIntegridade <= 0)
+		if (nave.getRooms().at(i)->getIntegridade() <= 0)
 			return true;
 	}
 
@@ -57,7 +57,7 @@ bool jogo::VerificaFimJogo(SpaceShip &nave)
 
 bool jogo::VerificaNaveAnda(SpaceShip &nave) //verifica se a nave pode andar 
 {
-	if (nave.getRooms().at(5)->getIntegridade < 100)
+	if (nave.getRooms().at(5)->getIntegridade() < 100)
 		return false; //nao pode andar
 
 	for (int i = 0; i != nave.getTripulacao().size(); i++)

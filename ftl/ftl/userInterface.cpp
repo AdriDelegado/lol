@@ -301,7 +301,7 @@ void UserInterface::setSalasComuns(SpaceShip &apolo1){
 }
 void  UserInterface::setSalasUtilizador(SpaceShip &apolo1){
 	string comando;
-	cursor();
+	
 	c.gotoxy(6, 23); // posicçao da info para introzur
 	cout << "Introduza Salas";
 	c.gotoxy(6, 25); // posicçao da introduçao dos camandos
@@ -359,19 +359,19 @@ void UserInterface::verificaComando(Comando &comObj, SpaceShip &apolo1, int veri
 	if (verifica == 0){		//o camndo vem da funcao setSalasUtilizador()
 		if (comObj.getArg3() == "beliche"){
 		
-			Beliche *salaBeliche = new Beliche(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
-				apolo1.setRooms(*salaBeliche);
+		//	Beliche *salaBeliche = new Beliche(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
+		//		apolo1.setRooms(*salaBeliche);
 
-				escreve.escreveNomeSala(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
+		//		escreve.escreveNomeSala(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
 
 			}
 	}
 	else if (verifica == 1){
 		if (comObj.getArg3() == "Capitao"){
-			Capitao *newCapitao = new Capitao();
-			apolo1.setTripulacao(*newCapitao);
+		//	Capitao *newCapitao = new Capitao();
+		//	apolo1.setTripulacao(*newCapitao);
 			
-			escreve.desenhaTripulante(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
+		//	escreve.desenhaTripulante(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
 		}
 	}
 	

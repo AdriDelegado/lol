@@ -26,6 +26,8 @@ public:
 	int getExoesqueleto();
 	bool getRespira();
 	int getLocalizacao();
+	
+	
 	//------SET---------
 	void setId(int id);
 	void setIdSala(int NidSala);

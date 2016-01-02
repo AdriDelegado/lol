@@ -1,7 +1,10 @@
 #pragma once
 #ifndef JOGO_H
 #define JOGO_H
-
+#include "spaceShip.h"
+#include <iostream>
+#include <string>
+#include <vector>
 class jogo
 {
 	int dificuldade;

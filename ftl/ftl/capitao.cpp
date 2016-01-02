@@ -71,3 +71,6 @@ void Capitao::setLocalizacao(int localizacao){
 void Capitao::setNome(string nome){
 	this->nome = nome;
 }
+void Capitao::setId(int id){
+	this->id = id;
+}
