@@ -242,15 +242,18 @@ int settings()
 					}
 				if (y == 12)
 				{
-					y = 12;
+					c.gotoxy(x, y);
+					cout << ' ';
 					x = 27;
+					y = 12;
 					c.gotoxy(x, y);
 					cout << ">";
 					while (1)
 					{
+						
+						tecla = c.getch();
 						c.gotoxy(x, y);
 						cout << ' ';
-						tecla = c.getch();
 						if (tecla == c.ENTER)
 						{
 							if (x == 27)
@@ -259,6 +262,7 @@ int settings()
 								//musica on;
 								x = 7;
 								c.gotoxy(x, y);
+								cout << ">";
 								break;
 							}
 							if (x == 37)
@@ -267,6 +271,7 @@ int settings()
 								//musica off
 								x = 7;
 								c.gotoxy(x, y);
+								cout << ">";
 								break;
 							}
 						}
@@ -275,12 +280,16 @@ int settings()
 						{
 							if (x == 37)
 							{	
+								c.gotoxy(x, y);
+								cout << ' ';
 								x = 27;
 								c.gotoxy(x, y);
 								cout << ">";
 							}
 							else
 							{
+								c.gotoxy(x, y);
+								cout << ' ';
 								x = x + 10;
 								c.gotoxy(x, y);
 								cout << ">";
@@ -291,12 +300,16 @@ int settings()
 						{
 							if (x == 27)
 							{
+								c.gotoxy(x, y);
+								cout << ' ';
 								x = 37;
 								c.gotoxy(x, y);
 								cout << ">";
 							}
 							else
 							{
+								c.gotoxy(x, y);
+								cout << ' ';
 								x = x - 10;
 								c.gotoxy(x, y);
 								cout << ">";
