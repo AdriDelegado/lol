@@ -17,12 +17,12 @@ protected:
 	int exoesqueleto;
 	bool respira;
 public:
-	Tripulante(int hp, int reparador, int combatente, bool operador, int exoesqueleto, bool respira, int localizacao, string nome, int id);
+	Tripulante(int hp, int reparador, int combatente, bool operador, int exoesqueleto, bool respira, int localizacao, string nome, string id);
 	Tripulante();
 	~Tripulante();
 
 	//------GET---------
-	int getId();
+	string getId();
 	int getIdSala();
 	int getHP();
 	string getNome();
@@ -34,7 +34,7 @@ public:
 	virtual	bool getRespira() = 0;
 	virtual int getLocalizacao() = 0;
 	//------SET---------
-	void setId(int id);
+	void setId(string id);
 	void setIdSala(int NidSala);
 	void setNome(string nome);
 	void setHP(int hp);

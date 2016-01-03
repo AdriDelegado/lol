@@ -20,7 +20,7 @@ int main(){
 
 void menuPrincipal(){
 	Consola c;
-	int dificuldade; //valor para agarrar a dificuldade seleccionada, deve ser preciso meter em kel classe
+	int dificuldade=0; //valor para agarrar a dificuldade seleccionada, deve ser preciso meter em kel classe
 	c.setScreenSize(400, 400);
 	c.setTextSize(20, 20);
 	c.setTextColor(c.AZUL_CLARO);
@@ -43,7 +43,7 @@ void menuPrincipal(){
 			if (y == 10){
 				c.clrscr();			//limpa o ecra
 				UserInterface s;
-				s.novoJogo();
+				s.novoJogo(dificuldade);
 				
 			}
 			if (y == 11){

@@ -13,21 +13,21 @@ protected:
 	int hp;
 	string nome;
 	int idSala; //sala onde esta a unidade
-	int id;
+	string id;
 
 public:
-	Unidade(int hp, string nome, int id);
+	Unidade(int hp, string nome, string id);
 	Unidade();
 	virtual ~Unidade(void);
 
 
 	//------GET---------
-	virtual int getId() = 0;
+	virtual string getId() = 0;
 	virtual string getNome()=0;
 	virtual int getHP() = 0;
 	virtual int getIdSala() = 0;
 	//------SET---------
-	virtual void setId(int id) = 0;
+	virtual void setId(string id) = 0;
 	virtual void setNome(string nome) = 0;
 	virtual void setHp(int newHP) = 0;
 	virtual void setIdSala(int NidSala) = 0;

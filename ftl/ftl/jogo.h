@@ -2,6 +2,9 @@
 #ifndef JOGO_H
 #define JOGO_H
 #include "spaceShip.h"
+#include "capitao.h"
+#include "camisaVermelha.h"
+#include "robo.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -22,8 +25,8 @@ public:
 	int getMusica();
 	int getMilhasIniciais();
 	int getMilhasActuais();
-	void calculaMilhas(int Ndificuldade);
-	void calculaMilhasActual(int NmilhasActuais, int propD, int propE);
+	void calculaMilhasIniciais(int Ndificuldade);
+	void calculaMilhasActual(int propD, int propE);
 	bool VerificaFimJogo(SpaceShip &nave); //se for true o jogo acaba
 	bool VerificaNaveAnda(SpaceShip &nave); //se for false nave nao anda
 	//-------SET---------------------
@@ -32,6 +35,9 @@ public:
 	void setMusica(int Nmusica );
 	void setMilhasIniciais(int NmilhasIniciais);
 	void setMilhasActuais(int nMilhasActuais);
+	
+	void repararIntegridade(SpaceShip &apolo1);
+	
 };
 
 #endif

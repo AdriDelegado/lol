@@ -3,7 +3,7 @@
 #define DesenhoMAPA_H
 #include "consola.h"
 #include <iostream>
-
+#include <vector>
 using namespace std;
 
 class Desenho
@@ -16,13 +16,14 @@ public:
 	Desenho();
 	~Desenho();
 
+	void limpaPosicaoActual(int posA);
 	void DesenhoLimitesNave();
 	void DesenhoLimitesInfo();
 	void DesenhoLimitesComandos();
 	void DesenhoPortas();
 	void DesenhoSala();
 	void escreveNomeSala(string nome, int posicao);
-	void desenhaTripulante(string nome, int posicao);
+	void desenhaTripulante(string nome, int posicao,int posA);
 };
 
 #endif

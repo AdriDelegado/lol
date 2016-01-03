@@ -2,7 +2,7 @@
 
 
 
-Tripulante::Tripulante(int hp, int reparador, int combatente, bool operador, int exoesqueleto, bool respira, int localizacao, string nome, int id) :Unidade(hp, nome, id){
+Tripulante::Tripulante(int hp, int reparador, int combatente, bool operador, int exoesqueleto, bool respira, int localizacao, string nome, string id) :Unidade(hp, nome, id){
 
 	this->reparador = reparador;
 	this->combatente = combatente;
@@ -16,7 +16,7 @@ Tripulante::Tripulante(int hp, int reparador, int combatente, bool operador, int
 Tripulante::Tripulante(){}
 Tripulante::~Tripulante(){}
 
-int Tripulante::getId()
+string Tripulante::getId()
 {
 	return this->id;
 }
@@ -31,7 +31,7 @@ string Tripulante::getNome(){
 	return this->nome;
 }
 
-void Tripulante::setId(int id)
+void Tripulante::setId(string id)
 {
 	this->id = id;
 }

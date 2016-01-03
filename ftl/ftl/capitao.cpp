@@ -1,14 +1,14 @@
 #include "capitao.h"
 
 
-Capitao::Capitao() : Tripulante(6, 1, 2, true, 1, true, 0, "Capitao", 1){
+Capitao::Capitao(string id) : Tripulante(6, 1, 2, true, 1, true, 0, "Capitao", id){
 
 }
 
 Capitao::~Capitao(){}
 
 //------GET---------
-int Capitao::getId()
+string Capitao::getId()
 {
 	return this->id;
 }
@@ -73,6 +73,6 @@ void Capitao::setLocalizacao(int localizacao){
 void Capitao::setNome(string nome){
 	this->nome = nome;
 }
-void Capitao::setId(int id){
+void Capitao::setId(string id){
 	this->id = id;
 }

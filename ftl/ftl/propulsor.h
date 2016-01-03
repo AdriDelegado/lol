@@ -16,11 +16,11 @@ public:
 	~Propulsor(void);			//destrutor
 
 	//------GET---------
-	virtual int getNivelPropulsor();
+	int getNivelPropulsor();
 
 
 	//------SET---------
-	virtual void setNivelPropulsor(int newValorNivelPropulsor);
+	void setNivelPropulsor(int newValorNivelPropulsor);
 
 
 	//------GET---------

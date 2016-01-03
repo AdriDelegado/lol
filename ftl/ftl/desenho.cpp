@@ -1654,63 +1654,143 @@ void Desenho::escreveNomeSala(string nome, int posicao){
 	}
 }
 
-void Desenho::desenhaTripulante(string nome, int posicao){
+void Desenho::desenhaTripulante(string nome, int posicao,int posA){
 	Consola c;
 	c.setTextColor(c.AZUL);
 	c.setBackgroundColor(c.BRANCO);
-	if (nome == "Capitao"){
+	string s = nome;
+	vector<char> v(s.begin(), s.end());
+
+
+
+	if (v[0] == 'C'){
 		switch (posicao)
 		{
 		case 1:
 			c.gotoxy(13, 5);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 2:
 			c.gotoxy(28, 5);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 3:
 			c.gotoxy(43, 5);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 4:
 			c.gotoxy(58, 5);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 5:
 			c.gotoxy(28, 11);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 6:
 			c.gotoxy(43, 11);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 7:
 			c.gotoxy(58, 11);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 8:
 			c.gotoxy(73, 11);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 9:
 			c.gotoxy(13, 17);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 10:
 			c.gotoxy(28, 17);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 11:
 			c.gotoxy(43, 17);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		case 12:
 			c.gotoxy(58, 17);
 			cout << (char)190;
+			limpaPosicaoActual(posA);
 			break;
 		default:
 			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
 		}
 	}
+}
+
+void Desenho::limpaPosicaoActual(int posA){
+
+	Consola c;
+	c.setTextColor(c.BRANCO);
+	c.setBackgroundColor(c.BRANCO);
+	
+	
+		switch (posA)
+		{
+		case 1:
+			c.gotoxy(13, 5);
+			cout << (char)219;
+			break;
+		case 2:
+			c.gotoxy(28, 5);
+			cout << (char)219;
+			break;
+		case 3:
+			c.gotoxy(43, 5);
+			cout << (char)219;
+			break;
+		case 4:
+			c.gotoxy(58, 5);
+			cout << (char)219;
+			break;
+		case 5:
+			c.gotoxy(28, 11);
+			cout << (char)219;
+			break;
+		case 6:
+			c.gotoxy(43, 11);
+			cout << (char)219;
+			break;
+		case 7:
+			c.gotoxy(58, 11);
+			cout << (char)219;
+			break;
+		case 8:
+			c.gotoxy(73, 11);
+			cout << (char)219;
+			break;
+		case 9:
+			c.gotoxy(13, 17);
+			cout << (char)219;
+			break;
+		case 10:
+			c.gotoxy(28, 17);
+			cout << (char)219;
+			break;
+		case 11:
+			c.gotoxy(43, 17);
+			cout << (char)219;
+			break;
+		case 12:
+			c.gotoxy(58, 17);
+			cout << (char)219;
+			break;
+		default:
+			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
+		}
+	
 }

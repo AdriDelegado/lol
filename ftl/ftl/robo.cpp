@@ -1,14 +1,14 @@
 #include "Robo.h"
 
 
-Robo::Robo() : Tripulante(8, 0, 3, false, 2, false, 0, "X34-ZT2", 3){
+Robo::Robo(string id) : Tripulante(8, 0, 3, false, 2, false, 0, "X34-ZT2", id){
 
 }
 
 Robo::~Robo(){}
 
 //------GET---------
-int Robo::getId()
+string Robo::getId()
 {
 	return this->id;
 }
@@ -44,7 +44,7 @@ int Robo::getLocalizacao(){
 }
 //------SET---------
 
-void Robo::setId(int id)
+void Robo::setId(string id)
 {
 	this->id = id;
 }

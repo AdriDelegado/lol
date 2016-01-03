@@ -12,11 +12,11 @@ class Robo : public Tripulante{
 
 public:
 
-	Robo();
+	Robo(string id);
 	~Robo();
 
 	//------GET---------
-	int getId();
+	string getId();
 	int getIdSala();
 	int getHP();
 	string getNome();
@@ -27,7 +27,7 @@ public:
 	bool getRespira();
 	int getLocalizacao();
 	//------SET---------
-	void setId(int id);
+	void setId(string id);
 	void setIdSala(int NidSala);
 	void setHp(int newHP);
 	void setReparador(int reparador);

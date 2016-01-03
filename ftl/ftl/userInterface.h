@@ -21,7 +21,7 @@
 #include "capitao.h"
 #include "camisaVermelha.h"
 #include "robo.h"
-
+#include "jogo.h"
 using namespace std;
 
 class UserInterface{
@@ -30,17 +30,19 @@ class UserInterface{
 	static int cor; // para a cor de algo ??
 	Consola c;
 	Comando comObj;
-
+	int cache;
 	SpaceShip apolo1;
+	jogo jogo;
 public:
 	UserInterface(void);
 	~UserInterface(void);
-
+	int getCache(){ return this->cache; };
+	void setCache(int cache){ this->cache = cache; };
 	void setX(int x){ this->x = x; };
 	void setY(int y){ this->y = y; };
 	int getX() { return this->x; };
 	int getY() { return this->y; };
-	void novoJogo();
+	void novoJogo(int dificuldade);
 	void setSalasComuns();
 	void setSalasUtilizador();
 	void setTripulantesUtilizador();
@@ -48,7 +50,7 @@ public:
 	//void escreveComando();								//funcao para pedir comandos
 	void limpaComando();								//limpa comandos ??
 	void separaComando(string & comando, Comando & comObj);
-	void verificaComando(Comando &comObj, SpaceShip &apolo1, int verifica);
+	void verificaComando(Comando &comObj, SpaceShip &apolo1);
 	int getCodeComando(Comando &comObj);
 	void cursorSetTripulante();
 	void cursorSetSala();

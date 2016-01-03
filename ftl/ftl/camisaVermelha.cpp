@@ -1,13 +1,13 @@
 #include "camisaVermelha.h"
 
 
-CamisaVermelha::CamisaVermelha() : Tripulante(5, 1, 1, true, 0, true, 0,"Camisa Vermelha", 2){}
+CamisaVermelha::CamisaVermelha(string id) : Tripulante(5, 1, 1, true, 0, true, 0, "Camisa Vermelha", id){}
 
 CamisaVermelha::~CamisaVermelha(){}
 
 
 		//------GET---------
-int CamisaVermelha::getId()
+string CamisaVermelha::getId()
 {
 	return this->id;
 }
@@ -42,7 +42,7 @@ int CamisaVermelha::getLocalizacao(){
 	return this->localizacao;
 }
 		//------SET---------
-void CamisaVermelha::setId(int id)
+void CamisaVermelha::setId(string id)
 {
 	this->id = id;
 }

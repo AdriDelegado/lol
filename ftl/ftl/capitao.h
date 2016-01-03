@@ -12,11 +12,11 @@ class Capitao : public Tripulante{
 
 public:
 	
-	Capitao();
+	Capitao(string id);
 	~Capitao();
 
 	//------GET---------
-	int getId();
+	string getId();
 	int getIdSala();
 	int getHP();
 	string getNome();
@@ -29,7 +29,7 @@ public:
 	
 	
 	//------SET---------
-	void setId(int id);
+	void setId(string id);
 	void setIdSala(int NidSala);
 	void setHp(int newHP);
 	void setReparador(int reparador);
