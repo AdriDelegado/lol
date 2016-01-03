@@ -1,9 +1,6 @@
 #include "Sala.h"
 
 
-Sala::Sala(){
-
-}
 
 Sala::Sala(int id, string nome, int posicao,int x, int y){
 	this->id = id;
@@ -16,7 +13,7 @@ Sala::Sala(int id, string nome, int posicao,int x, int y){
 	this->fogo = false;
 	this->curtoCircuito = false;  // o que é cc ?
 	this->numeroOcupantes = 0;
-
+	this->posicao = posicao;
 }
 
 Sala::~Sala(void){}

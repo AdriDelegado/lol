@@ -11,6 +11,7 @@ void UserInterface::cursorSetTripulante()
 	c.gotoxy(x, y);
 	cout << '>';
 	while (1) {
+
 		tecla = c.getch();
 		if (tecla == c.ENTER)
 			c.gotoxy(6, 25);
@@ -112,78 +113,72 @@ void UserInterface::cursorSetTripulante()
 }
 void UserInterface::cursorSetSala()
 {
+	c.setTextColor(c.PRETO);
+	c.setBackgroundColor(c.BRANCO);
 	char tecla;
 
-	int x = 12, y = 5;
+	int x = 27, y = 5;
 	c.gotoxy(x, y);
 	cout << '>';
+	
 	while (1) {
 		tecla = c.getch();
-		if (tecla == c.ENTER)
-			c.gotoxy(6, 25);
+		if (tecla == c.ENTER){
+			c.setTextColor(c.BRANCO);
+			c.gotoxy(x, y);
+			cout << (char)219;
+		
+			this->setX(x);
+			this->setY(y);
+			break;
+		}
+			
 		if ((tecla != c.ESQUERDA) && (tecla != c.DIREITA) &&
 			(tecla != c.CIMA) && (tecla != c.BAIXO)) continue;
-
+		
+		c.setBackgroundColor(c.BRANCO);
+		c.setTextColor(c.BRANCO);
 		c.gotoxy(x, y);
 		cout << (char)219;
-
+		c.setTextColor(c.PRETO);
+		
 		if (tecla == c.CIMA)
 		{
-			if (x == 72)
-			{
-				c.gotoxy(x, y);
+			if (y == 5 ){
+				
+				y = 17;
+				c.gotoxy(x,y);
 				cout << '>';
 			}
-			else if (x == 12 && y == 17)
-			{
+			else if(y==17 ){
+				
 				y = 5;
 				c.gotoxy(x, y);
 				cout << '>';
 			}
-			else if (y == 5){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
-				y = 17;
-				c.gotoxy(x, y);
-				cout << '>';
-			}
-			else{
-				y = y - 6;
-				c.gotoxy(x, y);
-				cout << '>';
-			}
 		}
+
 		if (tecla == c.BAIXO)
 		{
-			if (x == 72)
-			{
-				c.gotoxy(x, y);
-				cout << '>';
-			}
-			else if (x == 12 && y == 5)
-			{
+			if (y == 5){
+
 				y = 17;
 				c.gotoxy(x, y);
 				cout << '>';
 			}
-			else if (y == 17){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+			else if (y == 17){
+
 				y = 5;
 				c.gotoxy(x, y);
 				cout << '>';
 			}
-			else{
-				y = y + 6;
-				c.gotoxy(x, y);
-				cout << '>';
-			}
 		}
+
+
 		if (tecla == c.ESQUERDA)
 		{
-			if (x == 27 && y == 11)
+			if (x == 27)
 			{
-				x = 72;
-				c.gotoxy(x, y);
-				cout << '>';
-			}
-			else if (x == 12){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
 				x = 57;
 				c.gotoxy(x, y);
 				cout << '>';
@@ -197,14 +192,9 @@ void UserInterface::cursorSetSala()
 
 		if (tecla == c.DIREITA)
 		{
-			if (x == 72 && y == 11)
+			if (x == 57)
 			{
-				x = 27;;
-				c.gotoxy(x, y);
-				cout << '>';
-			}
-			else if (x == 57 && y != 11){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
-				x = 12;
+				x = 27;
 				c.gotoxy(x, y);
 				cout << '>';
 			}
@@ -217,10 +207,11 @@ void UserInterface::cursorSetSala()
 
 	}
 }
+
+
 void UserInterface::novoJogo(){
 	//comando ordem; //verificar se vamos ter comandos para alem de andar de Sala em Sala 
-	
-	
+		
 	int flag = 0;
 	//	nave SpaceShip;		//aqui ja tem as Salas
 	Desenho treeOfLife;
@@ -230,50 +221,46 @@ void UserInterface::novoJogo(){
 	treeOfLife.DesenhoPortas();
 	treeOfLife.DesenhoSala();
 	
-	setSalasComuns(apolo1); // as Salas iniciasi da nave
+	setSalasComuns(); // as Salas iniciasi da nave
 	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
 	c.setTextColor(c.AZUL);
 	c.setBackgroundColor(c.PRETO);
 	
-	setSalasUtilizador(apolo1);  // funçao para o utilizador por as Salas
+	setSalasUtilizador();  // funçao para o utilizador por as Salas
 	c.setTextColor(c.AZUL);
 	c.setBackgroundColor(c.PRETO);
-	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
-	//cout << "                                                               ";
-	//c.gotoxy(6, 25); // posicçao da introduçao dos camndos
-
-	setTripulantesUtilizador(apolo1);
+			
+	//setTripulantesUtilizador();
 	
 	
+	c.gotoxy(6, 23); // posicçao da info para introzur
+	cout << "Introduza Comando";
+	c.gotoxy(6, 25); // posicçao da introduçao dos camandos
 	
-	//setNivelDificuldade(); // função para por os parametros do Jogo
- 	
+	
+	while (1)
+	{
+		limpaComando();
+		
+		string comando;
 
-	//this->x = 0;
-	//this->y = 0;
-	//while (1)
-	//{
-	//	/*limpaComando();
-	//	escreveComando();
-	//	string comando;
+		getline(cin, comando);
 
-	//	getline(cin, comando);*/
+		separaComando(comando, comObj);
+		verificaComando(comObj, apolo1, flag);
 
-	//	/*separaComando(comando, comObj);
-	//	trataComando(comObj, Mapa, pop);*/
+	
 
-	////	desenhaSpaceShip(SpaceShip);
-
-	//	//if(flag==0)
-	//	//PlaySound(TEXT("..\\SOUNDS\\GOT.WAV"), NULL, SND_ASYNC | SND_LOOP);
+	//	if(flag==0)
+		//PlaySound(TEXT("..\\SOUNDS\\GOT.WAV"), NULL, SND_ASYNC | SND_LOOP);
 
 
-	//	flag++;
+		flag++;
 
-	//}
+	}
 }
 
-void UserInterface::setSalasComuns(SpaceShip &apolo1){
+void UserInterface::setSalasComuns(){
 	
 
 	
@@ -299,19 +286,43 @@ void UserInterface::setSalasComuns(SpaceShip &apolo1){
 
 	
 }
-void  UserInterface::setSalasUtilizador(SpaceShip &apolo1){
+void  UserInterface::setSalasUtilizador(){
+	int pos;
 	string comando;
+	
 	
 	c.gotoxy(6, 23); // posicçao da info para introzur
 	cout << "Introduza Salas";
-	c.gotoxy(6, 25); // posicçao da introduçao dos camandos
-	getline(cin, comando);
-	separaComando(comando, comObj);
-	verificaComando(comObj,apolo1,0);
-
-
+	int flag=0;
+int x;
+	for (int i = 0; i < 6; i++){
+		cursorSetSala();
+		c.setBackgroundColor(c.PRETO);
+		c.setTextColor(c.AZUL);
+		c.gotoxy(6, 25); // posicçao da introduçao dos camandos
+		pos = veirifaPosica(this->x, this->y);
+		
+		for (x = 0; x != apolo1.getRooms().size(); x++){
+				if (apolo1.getRooms().at(x)->getPosicao() == pos){
+					c.gotoxy(84, 4); // posicçao da introduçao dos camandos
+					cout << "esta posicao ja esta preenchida";
+					flag = 1;
+				}
+				
+		}
+		if (flag == 0){
+			getline(cin, comando);
+			separaComando(comando, comObj);
+			verificaComando(comObj, apolo1, 0);
+			limpaComando();
+		}
+		else{
+			i--;
+			flag = 0;
+		}
+	}
 }
-void UserInterface::setTripulantesUtilizador(SpaceShip &apolo1){
+void UserInterface::setTripulantesUtilizador(){
 	string comando;
 	c.gotoxy(6, 23); // posicçao da info para introzur
 	cout << "Introduza um tripulante";
@@ -320,18 +331,15 @@ void UserInterface::setTripulantesUtilizador(SpaceShip &apolo1){
 	separaComando(comando, comObj);
 	verificaComando(comObj, apolo1, 1);
 }
-//void desenhaFundo(int x, int y);
-//void desenhaSpaceShip(nave &n);                             //vai iniciar o Desenho da nave
-//void respostasComandos(string introComando, string nome);	// recebe os comandos e devolve uma resposta ao ecra de confirmação ou nao
-//void escreveComando();								//funcao para pedir comandos
-//void desenhaInterfaceInit();						//desenha uma intercafe
-//void limpaComando();								//limpa comandos ??
+
+
 
 void UserInterface::separaComando(string & comando, Comando & comObj)
 {
 	int i = 0;
 	istringstream iss(comando);
-
+	comObj.setX(this->x);
+	comObj.setY(this->y);
 	do
 	{
 		string sub;
@@ -356,24 +364,77 @@ void UserInterface::separaComando(string & comando, Comando & comObj)
 void UserInterface::verificaComando(Comando &comObj, SpaceShip &apolo1, int verifica)
 {
 	Desenho escreve;
-	if (verifica == 0){		//o camndo vem da funcao setSalasUtilizador()
-		if (comObj.getArg3() == "beliche"){
-		
-		//	Beliche *salaBeliche = new Beliche(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
-		//		apolo1.setRooms(*salaBeliche);
-
-		//		escreve.escreveNomeSala(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
-
+	if (verifica >= 0 || verifica <= 1){
+		if (comObj.getArg1() == "set"){
+			if (comObj.getArg2() == "sala"){
+				if (comObj.getArg3() == "beliche"){
+					int pos = veirifaPosica(comObj.getX(), comObj.getY());
+					Beliche *salaBeliche = new Beliche(2, "Beliche", pos, comObj.getX(), comObj.getY());
+					apolo1.setRooms(*salaBeliche);
+					escreve.escreveNomeSala(comObj.getArg3(), pos);
+				}
 			}
-	}
-	else if (verifica == 1){
-		if (comObj.getArg3() == "Capitao"){
-		//	Capitao *newCapitao = new Capitao();
-		//	apolo1.setTripulacao(*newCapitao);
-			
-		//	escreve.desenhaTripulante(comObj.getArg3(), atoi(comObj.getArg4().c_str()));
+
+			else if (comObj.getArg2() == "tripulante"){
+				if (comObj.getArg3() == "capitao"){
+					int pos = veirifaPosica(comObj.getX(), comObj.getY());
+					Capitao *novoCapitao = new Capitao();
+					apolo1.setTripulacao(*novoCapitao);
+					escreve.escreveNomeSala(comObj.getArg3(), pos);
+				}
+				if (comObj.getArg3() == "camisa_vermelha"){
+					int pos = veirifaPosica(comObj.getX(), comObj.getY());
+					CamisaVermelha *novoCamisaVermelha = new CamisaVermelha();
+					apolo1.setTripulacao(*novoCamisaVermelha);
+					escreve.escreveNomeSala(comObj.getArg3(), pos);
+				}
+				if (comObj.getArg3() == "robo"){
+					int pos = veirifaPosica(comObj.getX(), comObj.getY());
+					Robo *novoRobo = new Robo();
+					apolo1.setTripulacao(*novoRobo);
+					escreve.escreveNomeSala(comObj.getArg3(), pos);
+				}
+			}
 		}
 	}
 	
 
 }
+
+void UserInterface::limpaComando(){
+	/*Desenho regen;
+	regen.DesenhoLimitesComandos();*/
+	c.setBackgroundColor(c.PRETO);
+	c.gotoxy(6, 25); // posicçao da introduçao dos camandos
+	cout << "                    ";
+	c.gotoxy(6, 25); // posicçao da introduçao dos camandos
+}
+
+int UserInterface::veirifaPosica(int x, int y){
+	if (x == 27 && y == 5){
+		return 2;
+	}
+	else if (x == 42 && y == 5){
+		return 3;
+	}
+	else if (x == 57 && y == 5){
+		return 4;
+	}
+	else if (x == 27 && y == 17){
+		return 10;
+	}
+	else if (x == 42 && y == 17){
+		return 11;
+	}
+	else if (x == 57 && y == 17){
+		return 12;
+	}
+	return 0;
+}
+
+//void desenhaFundo(int x, int y);
+//void desenhaSpaceShip(nave &n);                             //vai iniciar o Desenho da nave
+//void respostasComandos(string introComando, string nome);	// recebe os comandos e devolve uma resposta ao ecra de confirmação ou nao
+//void escreveComando();								//funcao para pedir comandos
+//void desenhaInterfaceInit();						//desenha uma intercafe
+//void limpaComando();								//limpa comandos ??

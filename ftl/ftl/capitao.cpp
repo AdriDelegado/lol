@@ -40,6 +40,8 @@ bool Capitao::getRespira(){
 int Capitao::getLocalizacao(){
 	return this->localizacao;
 }
+
+
 //------SET---------
 void Capitao::setIdSala(int NidSala)
 {

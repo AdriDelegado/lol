@@ -25,7 +25,7 @@ public:
 	virtual int getId() = 0;
 	virtual string getNome()=0;
 	virtual int getHP() = 0;
-	virtual int getidSala() = 0;
+	virtual int getIdSala() = 0;
 	//------SET---------
 	virtual void setId(int id) = 0;
 	virtual void setNome(string nome) = 0;

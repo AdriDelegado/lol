@@ -64,12 +64,12 @@ bool jogo::VerificaNaveAnda(SpaceShip &nave) //verifica se a nave pode andar
 	{
 		if (nave.getTripulacao().at(i)->getId() == 1 ) //capitao
 		{
-			if (nave.getTripulacao().at(i)->getidSala() == 8) //se esta na ponte
+			if (nave.getTripulacao().at(i)->getIdSala() == 8) //se esta na ponte
 				return true;//pode andar
 		}
 		else if (nave.getTripulacao().at(i)->getId() == 2)//camisa vermelha
 		{
-			if (nave.getTripulacao().at(i)->getidSala() == 8) //se esta na ponta
+			if (nave.getTripulacao().at(i)->getIdSala() == 8) //se esta na ponta
 				return true;
 		}
 	}
