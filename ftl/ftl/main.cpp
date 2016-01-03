@@ -77,7 +77,7 @@ void menuPrincipal(){
 		}
 		if (tecla == c.BAIXO){
 			y++;
-			if (y == 13){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+			if (y == 12){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
 				y = 10;
 				c.gotoxy(x, y);
 				cout << '>';
@@ -130,26 +130,27 @@ int settings()
 	int dificuldade;
 	
 	c.gotoxy(10, 10);
-	cout << "DIFICULDADE";
-	c.gotoxy(15, 10);
+	cout << "DIFICULDADE:";
+	c.gotoxy(30, 10);
 	cout << "EASY";
-	c.gotoxy(20, 10);
+	c.gotoxy(40, 10);
 	cout << "NORMAL";
-	c.gotoxy(25, 10);
+	c.gotoxy(50, 10);
 	cout << "HARD" << endl;
-	c.gotoxy(10, 15);
-	cout << "Musica";
-	c.gotoxy(15, 15);
+	c.gotoxy(10, 12);
+	cout << "MUSICA:";
+	c.gotoxy(30, 12);
 	cout << "ON";
-	c.gotoxy(15, 20);
+	c.gotoxy(40, 12);
 	cout << "OFF";
-	c.gotoxy(10, 30);
+	c.gotoxy(10, 15);
 	cout << "PRIMA ESC PARA VOLTAR";
 	int x = 7, y = 10;
 	c.gotoxy(x, y);
 	cout << '>';
 
-	while (1){
+	while (1)
+	{
 
 			tecla = c.getch();
 			if (tecla == c.ESCAPE)
@@ -160,44 +161,152 @@ int settings()
 			}
 			if (tecla == c.ENTER)
 			{
-				if (y == 10)
-				{
-					while (tecla != c.ENTER || tecla != c.ESCAPE)
+				
+					if (y == 10)
 					{
-						if (tecla)
-						if (x == 15)
+						c.gotoxy(x, y);
+						cout << ' ';
+						x = 27;
+						y = 10;
+						c.gotoxy(x, y);
+						cout << ">";
+						while (1)
 						{
-							dificuldade = 1;
-							c.gotoxy(7, 10);
+							tecla = c.getch();
+							c.gotoxy(x, y);
+							cout << ' ';
+							if (tecla == c.ENTER)
+							{
+								if (x == 27)
+								{
+									cout << ' ';
+									dificuldade = 1;
+									x = 7;
+									c.gotoxy(x, y); break;
+								}
+
+								if (x == 37)
+								{
+									cout << ' ';
+									dificuldade = 2;
+									x = 7;
+									c.gotoxy(x, y); break;
+								}
+
+								if (x == 47)
+								{
+									cout << ' ';
+									dificuldade = 3;
+									x = 7;
+									c.gotoxy(x, y); break;
+
+								}
+							}
+
+							if (tecla == c.DIREITA)
+							{
+								if (x == 47)
+								{
+									x = 27;
+									c.gotoxy(x, y);
+									cout << ">";
+								}
+								else
+								{
+
+									x = x + 10;
+									c.gotoxy(x, y);
+									cout << ">";
+								}
+
+							}
+							if (tecla == c.ESQUERDA)
+							{
+								if (x == 27)
+								{
+									x = 47;
+									c.gotoxy(x, y);
+									cout << ">";
+								}
+								else
+								{
+									x = x - 10;
+									c.gotoxy(x, y);
+									cout << ">";
+								}
+							}
+
+
 						}
 
-						if (x == 20)
+					}
+				if (y == 12)
+				{
+					y = 12;
+					x = 27;
+					c.gotoxy(x, y);
+					cout << ">";
+					while (1)
+					{
+						c.gotoxy(x, y);
+						cout << ' ';
+						tecla = c.getch();
+						if (tecla == c.ENTER)
 						{
-							dificuldade = 2;
-							c.gotoxy(7, 10);
+							if (x == 27)
+							{
+								cout << ' ';
+								//musica on;
+								x = 7;
+								c.gotoxy(x, y);
+								break;
+							}
+							if (x == 37)
+							{
+								cout << ' ';
+								//musica off
+								x = 7;
+								c.gotoxy(x, y);
+								break;
+							}
 						}
 
-						if (x == 25)
+						if (tecla == c.DIREITA)
 						{
-							dificuldade = 3;
-							c.gotoxy(7, 10);
+							if (x == 37)
+							{	
+								x = 27;
+								c.gotoxy(x, y);
+								cout << ">";
+							}
+							else
+							{
+								x = x + 10;
+								c.gotoxy(x, y);
+								cout << ">";
+							}
+
+						}
+						if (tecla == c.ESQUERDA)
+						{
+							if (x == 27)
+							{
+								x = 37;
+								c.gotoxy(x, y);
+								cout << ">";
+							}
+							else
+							{
+								x = x - 10;
+								c.gotoxy(x, y);
+								cout << ">";
+							}
 						}
 					}
 					
-
-				}
-				if (y == 11){
-					dificuldade = 2;
-					c.clrscr();			//limpa o ecra
-					menuPrincipal();
-				}
-				if (y == 12){
-					dificuldade = 3;
-					c.clrscr();			//limpa o ecra
-					menuPrincipal();
 				}
 
-			}
+				}
 			if ((tecla != c.ESQUERDA) && (tecla != c.DIREITA) &&
 				(tecla != c.CIMA) && (tecla != c.BAIXO)) continue;
 
@@ -205,29 +314,30 @@ int settings()
 			cout << ' ';
 
 			if (tecla == c.CIMA){
-				y--;
-				if (y == 9){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+				if (y == 10){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
 					y = 12;
 					c.gotoxy(x, y);
 					cout << '>';
 				}
 				else{
+					y = 10;
 					c.gotoxy(x, y);
 					cout << '>';
 				}
 			}
-			if (tecla == c.BAIXO){
-				y++;
-				if (y == 13){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
+			if (tecla == c.BAIXO)
+			{
+				if (y == 12){				// verfica a posiçaão do ">" para qeu nao exeda o limite desejado
 					y = 10;
 					c.gotoxy(x, y);
 					cout << '>';
 				}
 				else{
+					y = 12;
 					c.gotoxy(x, y);
 					cout << '>';
 				}
 			}
-		}	
+	}	
 	return dificuldade;
 }

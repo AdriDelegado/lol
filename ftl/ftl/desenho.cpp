@@ -680,8 +680,978 @@ void Desenho::escreveNomeSala(string nome, int posicao){
 		
 	}
 	
-		
-		
+		//-----RAIO LASER---
+
+	if (nome == "raio"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)82;
+			c.gotoxy(21, 3);
+			cout << (char)65;
+			c.gotoxy(22, 3);
+			cout << (char)73;
+			c.gotoxy(23, 3);
+			cout << (char)79;
+
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)82;
+			c.gotoxy(36, 3);
+			cout << (char)65;
+			c.gotoxy(37, 3);
+			cout << (char)73;
+			c.gotoxy(38, 3);
+			cout << (char)79;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)82;
+			c.gotoxy(51, 3);
+			cout << (char)65;
+			c.gotoxy(52, 3);
+			cout << (char)73;
+			c.gotoxy(52, 3);
+			cout << (char)79;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)82;
+			c.gotoxy(21, 15);
+			cout << (char)65;
+			c.gotoxy(22, 15);
+			cout << (char)73;
+			c.gotoxy(23, 15);
+			cout << (char)79;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)82;
+			c.gotoxy(36, 15);
+			cout << (char)65;
+			c.gotoxy(37, 15);
+			cout << (char)73;
+			c.gotoxy(38, 15);
+			cout << (char)79;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)82;
+			c.gotoxy(51, 15);
+			cout << (char)65;
+			c.gotoxy(52, 15);
+			cout << (char)73;
+			c.gotoxy(53, 15);
+			cout << (char)79;
+
+		}
+
+	}
+
+	//-----AUTO-REPARADOR
+
+	if (nome == "reparador"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)82;
+			c.gotoxy(21, 3);
+			cout << (char)69;
+			c.gotoxy(22, 3);
+			cout << (char)80;
+			c.gotoxy(23, 3);
+			cout << (char)65;
+			c.gotoxy(24, 3);
+			cout << (char)82;
+			c.gotoxy(25, 3);
+			cout << (char)65;
+			c.gotoxy(26, 3);
+			cout << (char)68;
+			c.gotoxy(27, 3);
+			cout << (char)79;
+			c.gotoxy(28, 3);
+			cout << (char)82;
+
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)82;
+			c.gotoxy(36, 3);
+			cout << (char)69;
+			c.gotoxy(37, 3);
+			cout << (char)80;
+			c.gotoxy(38, 3);
+			cout << (char)65;
+			c.gotoxy(39, 3);
+			cout << (char)82;
+			c.gotoxy(40, 3);
+			cout << (char)65;
+			c.gotoxy(41, 3);
+			cout << (char)68;
+			c.gotoxy(42, 3);
+			cout << (char)79;
+			c.gotoxy(43, 3);
+			cout << (char)82;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)82;
+			c.gotoxy(51, 3);
+			cout << (char)69;
+			c.gotoxy(52, 3);
+			cout << (char)80;
+			c.gotoxy(53, 3);
+			cout << (char)65;
+			c.gotoxy(54, 3);
+			cout << (char)82;
+			c.gotoxy(55, 3);
+			cout << (char)65;
+			c.gotoxy(56, 3);
+			cout << (char)68;
+			c.gotoxy(57, 3);
+			cout << (char)79;
+			c.gotoxy(58, 3);
+			cout << (char)82;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)82;
+			c.gotoxy(21, 15);
+			cout << (char)69;
+			c.gotoxy(22, 15);
+			cout << (char)80;
+			c.gotoxy(23, 15);
+			cout << (char)65;
+			c.gotoxy(24, 15);
+			cout << (char)82;
+			c.gotoxy(25, 15);
+			cout << (char)65;
+			c.gotoxy(26, 15);
+			cout << (char)68;
+			c.gotoxy(27, 15);
+			cout << (char)79;
+			c.gotoxy(28, 15);
+			cout << (char)82;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)82;
+			c.gotoxy(36, 15);
+			cout << (char)69;
+			c.gotoxy(37, 15);
+			cout << (char)80;
+			c.gotoxy(38, 15);
+			cout << (char)65;
+			c.gotoxy(39, 15);
+			cout << (char)82;
+			c.gotoxy(40, 15);
+			cout << (char)65;
+			c.gotoxy(41, 15);
+			cout << (char)68;
+			c.gotoxy(42, 15);
+			cout << (char)79;
+			c.gotoxy(43, 15);
+			cout << (char)82;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)82;
+			c.gotoxy(51, 15);
+			cout << (char)69;
+			c.gotoxy(52, 15);
+			cout << (char)80;
+			c.gotoxy(53, 15);
+			cout << (char)65;
+			c.gotoxy(54, 15);
+			cout << (char)82;
+			c.gotoxy(55, 15);
+			cout << (char)65;
+			c.gotoxy(56, 15);
+			cout << (char)68;
+			c.gotoxy(57, 15);
+			cout << (char)79;
+			c.gotoxy(58, 15);
+			cout << (char)82;
+
+		}
+
+	}
+		//-----------Sistema de segurança interno
+
+	if (nome == "segintern"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)83;
+			c.gotoxy(21, 3);
+			cout << (char)69;
+			c.gotoxy(22, 3);
+			cout << (char)71;
+			c.gotoxy(23, 3);
+			cout << (char)73;
+			c.gotoxy(24, 3);
+			cout << (char)78;
+			c.gotoxy(25, 3);
+			cout << (char)84;
+			c.gotoxy(26, 3);
+			cout << (char)69;
+			c.gotoxy(27, 3);
+			cout << (char)82;
+			c.gotoxy(28, 3);
+			cout << (char)78;
+
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)83;
+			c.gotoxy(36, 3);
+			cout << (char)69;
+			c.gotoxy(37, 3);
+			cout << (char)71;
+			c.gotoxy(38, 3);
+			cout << (char)73;
+			c.gotoxy(39, 3);
+			cout << (char)78;
+			c.gotoxy(40, 3);
+			cout << (char)84;
+			c.gotoxy(41, 3);
+			cout << (char)69;
+			c.gotoxy(42, 3);
+			cout << (char)82;
+			c.gotoxy(43, 3);
+			cout << (char)78;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)83;
+			c.gotoxy(51, 3);
+			cout << (char)69;
+			c.gotoxy(52, 3);
+			cout << (char)71;
+			c.gotoxy(53, 3);
+			cout << (char)73;
+			c.gotoxy(54, 3);
+			cout << (char)78;
+			c.gotoxy(55, 3);
+			cout << (char)84;
+			c.gotoxy(56, 3);
+			cout << (char)69;
+			c.gotoxy(57, 3);
+			cout << (char)82;
+			c.gotoxy(58, 3);
+			cout << (char)78;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)83;
+			c.gotoxy(21, 15);
+			cout << (char)69;
+			c.gotoxy(22, 15);
+			cout << (char)71;
+			c.gotoxy(23, 15);
+			cout << (char)73;
+			c.gotoxy(24, 15);
+			cout << (char)78;
+			c.gotoxy(25, 15);
+			cout << (char)84;
+			c.gotoxy(26, 15);
+			cout << (char)69;
+			c.gotoxy(27, 15);
+			cout << (char)82;
+			c.gotoxy(28, 15);
+			cout << (char)78;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)83;
+			c.gotoxy(36, 15);
+			cout << (char)69;
+			c.gotoxy(37, 15);
+			cout << (char)71;
+			c.gotoxy(38, 15);
+			cout << (char)73;
+			c.gotoxy(39, 15);
+			cout << (char)78;
+			c.gotoxy(40, 15);
+			cout << (char)84;
+			c.gotoxy(41, 15);
+			cout << (char)69;
+			c.gotoxy(42, 15);
+			cout << (char)82;
+			c.gotoxy(43, 15);
+			cout << (char)78;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)83;
+			c.gotoxy(51, 15);
+			cout << (char)69;
+			c.gotoxy(52, 15);
+			cout << (char)71;
+			c.gotoxy(53, 15);
+			cout << (char)73;
+			c.gotoxy(54, 15);
+			cout << (char)78;
+			c.gotoxy(55, 15);
+			cout << (char)84;
+			c.gotoxy(56, 15);
+			cout << (char)69;
+			c.gotoxy(57, 15);
+			cout << (char)82;
+			c.gotoxy(58, 15);
+			cout << (char)78;
+		}
+
+	}
+
+	//--------ENFERMARIA-------
+
+	if (nome == "enfermaria"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)69;
+			c.gotoxy(21, 3);
+			cout << (char)78;
+			c.gotoxy(22, 3);
+			cout << (char)70;
+			c.gotoxy(23, 3);
+			cout << (char)69;
+			c.gotoxy(24, 3);
+			cout << (char)82;
+			c.gotoxy(25, 3);
+			cout << (char)77;
+			c.gotoxy(26, 3);
+			cout << (char)65;
+			c.gotoxy(27, 3);
+			cout << (char)82;
+			c.gotoxy(28, 3);
+			cout << (char)73;
+			c.gotoxy(29, 3);
+			cout << (char)69;
+
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)69;
+			c.gotoxy(36, 3);
+			cout << (char)78;
+			c.gotoxy(37, 3);
+			cout << (char)70;
+			c.gotoxy(38, 3);
+			cout << (char)69;
+			c.gotoxy(39, 3);
+			cout << (char)82;
+			c.gotoxy(40, 3);
+			cout << (char)77;
+			c.gotoxy(41, 3);
+			cout << (char)65;
+			c.gotoxy(42, 3);
+			cout << (char)82;
+			c.gotoxy(43, 3);
+			cout << (char)73;
+			c.gotoxy(44, 3);
+			cout << (char)69;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)69;
+			c.gotoxy(51, 3);
+			cout << (char)78;
+			c.gotoxy(52, 3);
+			cout << (char)70;
+			c.gotoxy(53, 3);
+			cout << (char)69;
+			c.gotoxy(54, 3);
+			cout << (char)82;
+			c.gotoxy(55, 3);
+			cout << (char)77;
+			c.gotoxy(56, 3);
+			cout << (char)65;
+			c.gotoxy(57, 3);
+			cout << (char)82;
+			c.gotoxy(58, 3);
+			cout << (char)73;
+			c.gotoxy(59, 3);
+			cout << (char)69;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)69;
+			c.gotoxy(21, 15);
+			cout << (char)78;
+			c.gotoxy(22, 15);
+			cout << (char)70;
+			c.gotoxy(23, 15);
+			cout << (char)69;
+			c.gotoxy(24, 15);
+			cout << (char)82;
+			c.gotoxy(25, 15);
+			cout << (char)77;
+			c.gotoxy(26, 15);
+			cout << (char)65;
+			c.gotoxy(27, 15);
+			cout << (char)82;
+			c.gotoxy(28, 15);
+			cout << (char)73;
+			c.gotoxy(29, 15);
+			cout << (char)69;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)69;
+			c.gotoxy(36, 15);
+			cout << (char)78;
+			c.gotoxy(37, 15);
+			cout << (char)70;
+			c.gotoxy(38, 15);
+			cout << (char)69;
+			c.gotoxy(39, 15);
+			cout << (char)82;
+			c.gotoxy(40, 15);
+			cout << (char)77;
+			c.gotoxy(41, 15);
+			cout << (char)65;
+			c.gotoxy(42, 15);
+			cout << (char)82;
+			c.gotoxy(43, 15);
+			cout << (char)73;
+			c.gotoxy(44, 15);
+			cout << (char)69;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)69;
+			c.gotoxy(51, 15);
+			cout << (char)78;
+			c.gotoxy(52, 15);
+			cout << (char)70;
+			c.gotoxy(53, 15);
+			cout << (char)69;
+			c.gotoxy(54, 15);
+			cout << (char)82;
+			c.gotoxy(55, 15);
+			cout << (char)77;
+			c.gotoxy(56, 15);
+			cout << (char)65;
+			c.gotoxy(57, 15);
+			cout << (char)82;
+			c.gotoxy(58, 15);
+			cout << (char)73;
+			c.gotoxy(59, 15);
+			cout << (char)69;
+		}
+
+	}
+
+	//-------ARMAS--------
+
+	if (nome == "armas"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)65;
+			c.gotoxy(21, 3);
+			cout << (char)82;
+			c.gotoxy(22, 3);
+			cout << (char)77;
+			c.gotoxy(23, 3);
+			cout << (char)65;
+			c.gotoxy(24, 3);
+			cout << (char)83;
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)65;
+			c.gotoxy(36, 3);
+			cout << (char)82;
+			c.gotoxy(37, 3);
+			cout << (char)77;
+			c.gotoxy(38, 3);
+			cout << (char)65;
+			c.gotoxy(39, 3);
+			cout << (char)83;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)65;
+			c.gotoxy(51, 3);
+			cout << (char)82;
+			c.gotoxy(52, 3);
+			cout << (char)77;
+			c.gotoxy(53, 3);
+			cout << (char)65;
+			c.gotoxy(54, 3);
+			cout << (char)83;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)65;
+			c.gotoxy(21, 15);
+			cout << (char)82;
+			c.gotoxy(22, 15);
+			cout << (char)77;
+			c.gotoxy(23, 15);
+			cout << (char)65;
+			c.gotoxy(24, 15);
+			cout << (char)83;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)65;
+			c.gotoxy(36, 15);
+			cout << (char)82;
+			c.gotoxy(37, 15);
+			cout << (char)77;
+			c.gotoxy(38, 15);
+			cout << (char)65;
+			c.gotoxy(39, 15);
+			cout << (char)83;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)65;
+			c.gotoxy(51, 15);
+			cout << (char)82;
+			c.gotoxy(52, 15);
+			cout << (char)77;
+			c.gotoxy(53, 15);
+			cout << (char)65;
+			c.gotoxy(54, 15);
+			cout << (char)83;
+
+		}
+
+	}
+
+	//-------------ALOJAMENTO CAPITAO----
+
+	if (nome == "alojcapt"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)65;
+			c.gotoxy(21, 3);
+			cout << (char)76;
+			c.gotoxy(22, 3);
+			cout << (char)79;
+			c.gotoxy(23, 3);
+			cout << (char)74;
+			c.gotoxy(24, 3);
+			cout << (char)67;
+			c.gotoxy(25, 3);
+			cout << (char)65;
+			c.gotoxy(26, 3);
+			cout << (char)80;
+			c.gotoxy(27, 3);
+			cout << (char)84;
+			
+
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)65;
+			c.gotoxy(36, 3);
+			cout << (char)76;
+			c.gotoxy(37, 3);
+			cout << (char)79;
+			c.gotoxy(38, 3);
+			cout << (char)74;
+			c.gotoxy(39, 3);
+			cout << (char)67;
+			c.gotoxy(40, 3);
+			cout << (char)65;
+			c.gotoxy(41, 3);
+			cout << (char)80;
+			c.gotoxy(42, 3);
+			cout << (char)84;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)65;
+			c.gotoxy(51, 3);
+			cout << (char)76;
+			c.gotoxy(52, 3);
+			cout << (char)79;
+			c.gotoxy(53, 3);
+			cout << (char)74;
+			c.gotoxy(54, 3);
+			cout << (char)67;
+			c.gotoxy(55, 3);
+			cout << (char)65;
+			c.gotoxy(56, 3);
+			cout << (char)80;
+			c.gotoxy(57, 3);
+			cout << (char)84;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)65;
+			c.gotoxy(21, 15);
+			cout << (char)76;
+			c.gotoxy(22, 15);
+			cout << (char)79;
+			c.gotoxy(23, 15);
+			cout << (char)74;
+			c.gotoxy(24, 15);
+			cout << (char)67;
+			c.gotoxy(25, 15);
+			cout << (char)65;
+			c.gotoxy(26, 15);
+			cout << (char)80;
+			c.gotoxy(27, 15);
+			cout << (char)84;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)65;
+			c.gotoxy(36, 15);
+			cout << (char)76;
+			c.gotoxy(37, 15);
+			cout << (char)79;
+			c.gotoxy(38, 15);
+			cout << (char)74;
+			c.gotoxy(39, 15);
+			cout << (char)67;
+			c.gotoxy(40, 15);
+			cout << (char)65;
+			c.gotoxy(41, 15);
+			cout << (char)80;
+			c.gotoxy(42, 15);
+			cout << (char)84;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)65;
+			c.gotoxy(51, 15);
+			cout << (char)76;
+			c.gotoxy(52, 15);
+			cout << (char)79;
+			c.gotoxy(53, 15);
+			cout << (char)74;
+			c.gotoxy(54, 15);
+			cout << (char)67;
+			c.gotoxy(55, 15);
+			cout << (char)65;
+			c.gotoxy(56, 15);
+			cout << (char)80;
+			c.gotoxy(57, 15);
+			cout << (char)84;
+		}
+
+	}
+	//---------------OFICINA ROBOTICA------
+
+	if (nome == "ofirobo"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)79;
+			c.gotoxy(21, 3);
+			cout << (char)70;
+			c.gotoxy(22, 3);
+			cout << (char)73;
+			c.gotoxy(23, 3);
+			cout << (char)83;
+			c.gotoxy(24, 3);
+			cout << (char)79;
+			c.gotoxy(25, 3);
+			cout << (char)66;
+			c.gotoxy(26, 3);
+			cout << (char)79;
+
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)79;
+			c.gotoxy(36, 3);
+			cout << (char)70;
+			c.gotoxy(37, 3);
+			cout << (char)73;
+			c.gotoxy(38, 3);
+			cout << (char)83;
+			c.gotoxy(39, 3);
+			cout << (char)79;
+			c.gotoxy(40, 3);
+			cout << (char)66;
+			c.gotoxy(41, 3);
+			cout << (char)79;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)79;
+			c.gotoxy(51, 3);
+			cout << (char)70;
+			c.gotoxy(52, 3);
+			cout << (char)73;
+			c.gotoxy(53, 3);
+			cout << (char)83;
+			c.gotoxy(54, 3);
+			cout << (char)79;
+			c.gotoxy(55, 3);
+			cout << (char)66;
+			c.gotoxy(56, 3);
+			cout << (char)79;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)79;
+			c.gotoxy(21, 15);
+			cout << (char)70;
+			c.gotoxy(22, 15);
+			cout << (char)73;
+			c.gotoxy(23, 15);
+			cout << (char)83;
+			c.gotoxy(24, 15);
+			cout << (char)79;
+			c.gotoxy(25, 15);
+			cout << (char)66;
+			c.gotoxy(26, 15);
+			cout << (char)79;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)79;
+			c.gotoxy(36, 15);
+			cout << (char)70;
+			c.gotoxy(37, 15);
+			cout << (char)73;
+			c.gotoxy(38, 15);
+			cout << (char)83;
+			c.gotoxy(39, 15);
+			cout << (char)79;
+			c.gotoxy(40, 15);
+			cout << (char)66;
+			c.gotoxy(41, 15);
+			cout << (char)79;
+
+		}
+		else if (posicao == 12){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)79;
+			c.gotoxy(51, 15);
+			cout << (char)70;
+			c.gotoxy(52, 15);
+			cout << (char)73;
+			c.gotoxy(53, 15);
+			cout << (char)83;
+			c.gotoxy(54, 15);
+			cout << (char)79;
+			c.gotoxy(55, 15);
+			cout << (char)66;
+			c.gotoxy(56, 15);
+			cout << (char)79;
+		}
+
+	}
+
+	//--------PROPULSOR ADICIONAL
+
+	if(nome == "propa"){
+		// Sala 2
+		if (posicao == 2){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 3);
+			cout << (char)80;
+			c.gotoxy(21, 3);
+			cout << (char)82;
+			c.gotoxy(22, 3);
+			cout << (char)79;
+			c.gotoxy(23, 3);
+			cout << (char)80;
+			c.gotoxy(24, 3);
+			cout << (char)65;
+		}
+		else if (posicao == 3){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 3);
+			cout << (char)80;
+			c.gotoxy(36, 3);
+			cout << (char)82;
+			c.gotoxy(37, 3);
+			cout << (char)79;
+			c.gotoxy(38, 3);
+			cout << (char)80;
+			c.gotoxy(39, 3);
+			cout << (char)65;
+
+		}
+		else if (posicao == 4){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 3);
+			cout << (char)80;
+			c.gotoxy(51, 3);
+			cout << (char)82;
+			c.gotoxy(52, 3);
+			cout << (char)79;
+			c.gotoxy(53, 3);
+			cout << (char)80;
+			c.gotoxy(54, 3);
+			cout << (char)65;
+
+		}
+		else if (posicao == 10){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(20, 15);
+			cout << (char)80;
+			c.gotoxy(21, 15);
+			cout << (char)82;
+			c.gotoxy(22, 15);
+			cout << (char)79;
+			c.gotoxy(23, 15);
+			cout << (char)80;
+			c.gotoxy(24, 15);
+			cout << (char)65;
+
+		}
+		else if (posicao == 11){
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(35, 15);
+			cout << (char)80;
+			c.gotoxy(36, 15);
+			cout << (char)82;
+			c.gotoxy(37, 15);
+			cout << (char)79;
+			c.gotoxy(38, 15);
+			cout << (char)80;
+			c.gotoxy(39, 15);
+			cout << (char)65;
+
+		}
+		else if (posicao == 12)
+		{
+			c.setTextColor(c.AZUL);
+			c.setBackgroundColor(c.BRANCO);
+			c.gotoxy(50, 15);
+			cout << (char)80;
+			c.gotoxy(51, 15);
+			cout << (char)82;
+			c.gotoxy(52, 15);
+			cout << (char)79;
+			c.gotoxy(53, 15);
+			cout << (char)80;
+			c.gotoxy(54, 15);
+			cout << (char)65;
+		}
+
+	}
 }
 
 void Desenho::desenhaTripulante(string nome, int posicao){
@@ -742,8 +1712,5 @@ void Desenho::desenhaTripulante(string nome, int posicao){
 		default:
 			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
 		}
-
-		
-
 	}
 }
