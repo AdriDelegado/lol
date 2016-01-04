@@ -1660,70 +1660,263 @@ void Desenho::desenhaTripulante(string nome, int posicao,int posA){
 	c.setBackgroundColor(c.BRANCO);
 	string s = nome;
 	vector<char> v(s.begin(), s.end());
+	static int contaV = 0;
+	static int contaR = 0;
+	static int contaC = 0;
+	int y1, y2;
 
+	
 
 
 	if (v[0] == 'C'){
+		c.setTextColor(c.AMARELO);
+		contaC++;
+		y = 5;
+		y1 = 11;
+		y2 = 17;
+		
+		if (contaC == 2)
+		{
+			y++;
+			y1++;
+			y2++;
+		}
+		if (contaC == 3)
+		{
+			y += 2;
+			y1 += 2;
+			y2 += 2;
+		}
 		switch (posicao)
 		{
 		case 1:
-			c.gotoxy(13, 5);
-			cout << (char)190;
+			c.gotoxy(13, y);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 2:
-			c.gotoxy(28, 5);
-			cout << (char)190;
+			c.gotoxy(28, y);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 3:
-			c.gotoxy(43, 5);
-			cout << (char)190;
+			c.gotoxy(43, y);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 4:
-			c.gotoxy(58, 5);
-			cout << (char)190;
+			c.gotoxy(58, y);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 5:
-			c.gotoxy(28, 11);
-			cout << (char)190;
+			c.gotoxy(28, y1);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 6:
-			c.gotoxy(43, 11);
-			cout << (char)190;
+			c.gotoxy(43, y1);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 7:
-			c.gotoxy(58, 11);
-			cout << (char)190;
+			c.gotoxy(58, y1);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 8:
-			c.gotoxy(73, 11);
-			cout << (char)190;
+			c.gotoxy(73, y1);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 9:
-			c.gotoxy(13, 17);
-			cout << (char)190;
+			c.gotoxy(13, y2);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 10:
-			c.gotoxy(28, 17);
-			cout << (char)190;
+			c.gotoxy(28, y2);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 11:
-			c.gotoxy(43, 17);
-			cout << (char)190;
+			c.gotoxy(43, y2);
+			cout << (char)67;
 			limpaPosicaoActual(posA);
 			break;
 		case 12:
-			c.gotoxy(58, 17);
-			cout << (char)190;
+			c.gotoxy(58, y2);
+			cout << (char)67;
+			limpaPosicaoActual(posA);
+			break;
+		default:
+			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
+		}
+	}
+	if (v[0] == 'R'){
+		contaR++;
+		y = 5;
+		y1 = 11;
+		y2 = 17;
+
+		if (contaR == 2)
+		{
+			y++;
+			y1++;
+			y2++;
+		}
+		if (contaR == 3)
+		{
+			y += 2;
+			y1 += 2;
+			y2 += 2;
+		}
+		c.setTextColor(c.ROXO);
+		switch (posicao)
+		{
+		case 1:
+			c.gotoxy(14, 5);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 2:
+			c.gotoxy(29, 5);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 3:
+			c.gotoxy(44, 5);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 4:
+			c.gotoxy(59, 5);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 5:
+			c.gotoxy(29, 11);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 6:
+			c.gotoxy(44, 11);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 7:
+			c.gotoxy(59, 11);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 8:
+			c.gotoxy(74, 11);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 9:
+			c.gotoxy(14, 17);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 10:
+			c.gotoxy(29, 17);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 11:
+			c.gotoxy(44, 17);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		case 12:
+			c.gotoxy(59, 17);
+			cout << (char)82;
+			limpaPosicaoActual(posA);
+			break;
+		default:
+			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
+		}
+	}
+	if (v[0] == 'V'){
+		contaV++;
+		y = 5;
+		y1 = 11;
+		y2 = 17;
+
+		if (contaV == 2)
+		{
+			y++;
+			y1++;
+			y2++;
+		}
+		if (contaV == 3)
+		{
+			y += 2;
+			y1 += 2;
+			y2 += 2;
+		}
+		c.setTextColor(c.VERMELHO);
+		switch (posicao)
+		{
+		case 1:
+			c.gotoxy(15, 5);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 2:
+			c.gotoxy(30, 5);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 3:
+			c.gotoxy(45, 5);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 4:
+			c.gotoxy(60, 5);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 5:
+			c.gotoxy(30, 11);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 6:
+			c.gotoxy(45, 11);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 7:
+			c.gotoxy(60, 11);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 8:
+			c.gotoxy(75, 11);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 9:
+			c.gotoxy(15, 17);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 10:
+			c.gotoxy(30, 17);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 11:
+			c.gotoxy(45, 17);
+			cout << (char)86;
+			limpaPosicaoActual(posA);
+			break;
+		case 12:
+			c.gotoxy(60, 17);
+			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		default:
