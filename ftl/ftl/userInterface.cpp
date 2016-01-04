@@ -238,14 +238,16 @@ void UserInterface::novoJogo(int dificuldade){
 
 	c.setTextColor(c.AZUL);
 	c.setBackgroundColor(c.PRETO);
-
 	
-	//setSalasUtilizador();  // funçao para o utilizador por as Salas
+	
+		
+	
+	setSalasUtilizador();  // funçao para o utilizador por as Salas
 	c.setTextColor(c.VERDE);
 	c.setBackgroundColor(c.PRETO);
 
 	setTripulantesUtilizador();
-	apolo1.getRooms().at(0)->setIntegridade(80);
+	
 	c.setTextColor(c.VERDE);
 	c.setBackgroundColor(c.PRETO);
 
@@ -448,16 +450,15 @@ void UserInterface::verificaComando(Comando &comObj, SpaceShip &apolo1)
 	}
 	else if (comObj.getArg1() == "go"){
 		if (jogo.VerificaNaveAnda(apolo1) == true){
+			
 			Propulsor *pE = (Propulsor*)apolo1.getRooms().at(0);
 			Propulsor *pD = (Propulsor*)apolo1.getRooms().at(5);
+			
 			jogo.calculaMilhasActual(pD->getNivelPropulsor(),pE->getNivelPropulsor());
-			c.gotoxy(84, 4); // posicçao da introduçao dos camandos
-			cout << jogo.getMilhasActuais();
-			c.gotoxy(84, 8); // posicçao da introduçao dos camandos
-			cout << apolo1.getRooms().at(0)->getIntegridade();
+			
 			jogo.repararIntegridade(apolo1);
-			c.gotoxy(84, 10); // posicçao da introduçao dos camandos
-			cout << apolo1.getRooms().at(0)->getIntegridade();
+			
+			jogo.eventos(apolo1);
 		}
 		else{
 			c.gotoxy(84, 4); // posicçao da introduçao dos camandos

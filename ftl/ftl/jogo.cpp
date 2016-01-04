@@ -139,6 +139,40 @@ void jogo::repararIntegridade(SpaceShip &apolo1){
 	}
 }
 
+void jogo::eventos(SpaceShip &apolo1){
+	random_device rd;
+	mt19937 mt(rd());
+	uniform_int_distribution<int> dist(1, 100);
+	if (dist(mt) > 50){
+		eventoCampoPoCosmico(apolo1);
+	}
+}
+
+void jogo::eventoCampoPoCosmico(SpaceShip &apolo1){
+	random_device rd;
+	mt19937 mt(rd());
+	uniform_int_distribution<int> dist(0, 11);
+	for (int i = 0; i < 5; i++){
+		if (dist(mt) == 0 ){
+			Propulsor *p = (Propulsor*)apolo1.getRooms().at(dist(mt));
+			p->setNivelPropulsor(p->getNivelPropulsor() - 10);
+			p->setIntegridade(p->getIntegridade() - 10);
+			apolo1.getRooms().erase(apolo1.getRooms().begin());
+			apolo1.setRooms(*p);
+		}
+		else if (dist(mt) == 5){
+			Propulsor *p = (Propulsor*)apolo1.getRooms().at(dist(mt));
+			p->setNivelPropulsor(p->getNivelPropulsor() - 10);
+			p->setIntegridade(p->getIntegridade() - 10);
+			apolo1.getRooms().erase(apolo1.getRooms().begin()+5);
+			apolo1.setRooms(*p);
+		}
+		else{
+			apolo1.getRooms().at(dist(mt))->setIntegridade(apolo1.getRooms().at(dist(mt))->getIntegridade() - 10);
+		}
+		
+	}
+}
 //------------SET------------------
 
 void jogo::setDificuldade(int Ndificuldade){

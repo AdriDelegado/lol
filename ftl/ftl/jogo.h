@@ -9,6 +9,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <random>
+#include "propulsor.h"
+#include <algorithm>
+#include<iterator>
+
 class jogo
 {
 	int dificuldade;
@@ -38,7 +43,8 @@ public:
 	void setMilhasActuais(int nMilhasActuais);
 	
 	void repararIntegridade(SpaceShip &apolo1);
-	
+	void eventoCampoPoCosmico(SpaceShip &apolo1);
+	void eventos(SpaceShip &apolo1);
 };
 
 #endif

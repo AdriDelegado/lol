@@ -22,6 +22,7 @@
 #include "camisaVermelha.h"
 #include "robo.h"
 #include "jogo.h"
+#include<random>
 using namespace std;
 
 class UserInterface{
