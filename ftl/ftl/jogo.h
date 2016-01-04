@@ -5,6 +5,7 @@
 #include "capitao.h"
 #include "camisaVermelha.h"
 #include "robo.h"
+#include "consola.h"
 #include <iostream>
 #include <string>
 #include <vector>

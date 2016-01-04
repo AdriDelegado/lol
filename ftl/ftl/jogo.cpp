@@ -92,38 +92,56 @@ bool jogo::VerificaNaveAnda(SpaceShip &nave) //verifica se a nave pode andar
 }
 
 void jogo::repararIntegridade(SpaceShip &apolo1){
-
+	Consola cons;
+	int l = 0;
 	for (int x = 0; x != apolo1.getTripulacao().size(); x++){
 
 		string s = apolo1.getTripulacao().at(x)->getId();
 		vector<char> v(s.begin(), s.end());
+
 		if (v[0] == 'C'){
 			Capitao *c = (Capitao*)apolo1.getTripulacao().at(x);
-			if (apolo1.getRooms().at(c->getIdSala() - 1)->getIntegridade() < 100){  // pegar indicidual ID das salas e comparar com os do tripulante 
 
-				int integNovo = apolo1.getRooms().at(c->getIdSala() - 1)->getIntegridade() + c->getReparador();
-
-				apolo1.getRooms().at(c->getIdSala() - 1)->setIntegridade(integNovo);
+			for (int i = 0; i != apolo1.getRooms().size(); i++){
+				if (apolo1.getRooms().at(i)->getPosicao() == c->getIdSala()){
+					if (apolo1.getRooms().at(i)->getIntegridade() < 100){
+						apolo1.getRooms().at(i)->setIntegridade(apolo1.getRooms().at(i)->getIntegridade() + c->getReparador()); // falta validar se a integridade ultrapassa de 100
+						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
+						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " foi reparada";
+						l++;
+					}
+					else{
+						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
+						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " nao precisa de reparo";
+						l++;
+					}
+				}
 			}
-
 		}
 		else if (v[0] == 'V'){
 			CamisaVermelha *v = (CamisaVermelha*)apolo1.getTripulacao().at(x);
-			if (apolo1.getRooms().at(v->getIdSala() - 1)->getIntegridade() < 100){
-				int integNovo = apolo1.getRooms().at(v->getIdSala() - 1)->getIntegridade() + v->getReparador();
-
-				apolo1.getRooms().at(v->getIdSala() - 1)->setIntegridade(integNovo);
+			for (int i = 0; i != apolo1.getRooms().size(); i++){
+				if (apolo1.getRooms().at(i)->getPosicao() == v->getIdSala()){
+					if (apolo1.getRooms().at(i)->getIntegridade() < 100){
+						apolo1.getRooms().at(i)->setIntegridade(apolo1.getRooms().at(i)->getIntegridade() + v->getReparador()); // falta validar se a integridade ultrapassa de 100
+						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
+						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " foi reparada";
+						l++;
+					}
+					else{
+						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
+						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " nao precisa de reparo";
+						l++;
+					}
+				}
 			}
 		}
-
 	}
-
 }
 
 //------------SET------------------
 
-void jogo::setDificuldade(int Ndificuldade)
-{
+void jogo::setDificuldade(int Ndificuldade){
 	this->dificuldade = Ndificuldade;
 }
 void jogo::setMusica(int Nmusica)
