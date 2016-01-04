@@ -1775,62 +1775,62 @@ void Desenho::desenhaTripulante(string nome, int posicao,int posA){
 		switch (posicao)
 		{
 		case 1:
-			c.gotoxy(14, 5);
+			c.gotoxy(14, y);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 2:
-			c.gotoxy(29, 5);
+			c.gotoxy(29, y);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 3:
-			c.gotoxy(44, 5);
+			c.gotoxy(44, y);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 4:
-			c.gotoxy(59, 5);
+			c.gotoxy(59, y);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 5:
-			c.gotoxy(29, 11);
+			c.gotoxy(29, y1);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 6:
-			c.gotoxy(44, 11);
+			c.gotoxy(44, y1);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 7:
-			c.gotoxy(59, 11);
+			c.gotoxy(59, y1);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 8:
-			c.gotoxy(74, 11);
+			c.gotoxy(74, y1);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 9:
-			c.gotoxy(14, 17);
+			c.gotoxy(14, y2);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 10:
-			c.gotoxy(29, 17);
+			c.gotoxy(29, y2);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 11:
-			c.gotoxy(44, 17);
+			c.gotoxy(44, y2);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
 		case 12:
-			c.gotoxy(59, 17);
+			c.gotoxy(59, y2);
 			cout << (char)82;
 			limpaPosicaoActual(posA);
 			break;
@@ -1860,62 +1860,62 @@ void Desenho::desenhaTripulante(string nome, int posicao,int posA){
 		switch (posicao)
 		{
 		case 1:
-			c.gotoxy(15, 5);
+			c.gotoxy(15, y);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 2:
-			c.gotoxy(30, 5);
+			c.gotoxy(30, y);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 3:
-			c.gotoxy(45, 5);
+			c.gotoxy(45, y);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 4:
-			c.gotoxy(60, 5);
+			c.gotoxy(60, y);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 5:
-			c.gotoxy(30, 11);
+			c.gotoxy(30, y1);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 6:
-			c.gotoxy(45, 11);
+			c.gotoxy(45, y1);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 7:
-			c.gotoxy(60, 11);
+			c.gotoxy(60, y1);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 8:
-			c.gotoxy(75, 11);
+			c.gotoxy(75, y1);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 9:
-			c.gotoxy(15, 17);
+			c.gotoxy(15, y2);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 10:
-			c.gotoxy(30, 17);
+			c.gotoxy(30, y2);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 11:
-			c.gotoxy(45, 17);
+			c.gotoxy(45, y2);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
 		case 12:
-			c.gotoxy(60, 17);
+			c.gotoxy(60, y2);
 			cout << (char)86;
 			limpaPosicaoActual(posA);
 			break;
