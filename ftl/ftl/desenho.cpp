@@ -100,9 +100,10 @@ void Desenho::DesenhoLimitesComandos()
 void Desenho::DesenhoLimitesInfo()
 {
 	Consola c;
+	c.setTextColor(c.AZUL);
 	c.gotoxy(94, 1);
 	cout << "INFORMACAO";
-
+	
 	//inicio da borda de status
 	c.gotoxy(83, 2); //desenha esquina superior esquerda
 	cout << (char)218;
@@ -1652,6 +1653,8 @@ void Desenho::escreveNomeSala(string nome, int posicao){
 		}
 
 	}
+	c.setBackgroundColor(c.PRETO);
+	c.setTextColor(c.VERDE);
 }
 
 void Desenho::desenhaTripulante(string nome, int posicao,int posA){
@@ -1923,6 +1926,8 @@ void Desenho::desenhaTripulante(string nome, int posicao,int posA){
 			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
 		}
 	}
+	c.setBackgroundColor(c.PRETO);
+	c.setTextColor(c.VERDE);
 }
 
 void Desenho::limpaPosicaoActual(int posA){
@@ -1985,5 +1990,21 @@ void Desenho::limpaPosicaoActual(int posA){
 		default:
 			break;// escreve na zona de info que a sala nao existe e manda de novo tentar por numa 
 		}
-	
+		c.setBackgroundColor(c.PRETO);
+		c.setTextColor(c.VERDE);
 }
+
+void Desenho::escreveComandos(){
+	Consola c;
+	c.gotoxy(84, 4);
+	cout << "set sala beliche"; // depois temos de por uma funcoa que imprime todos as salas 
+	c.gotoxy(84, 5);
+	cout << "set tripulante 'nome tripulante'"; //  depois temos de por funcao que imprime todos os tripulantes
+	c.gotoxy(84, 6);
+	cout << "go";
+	c.gotoxy(84, 7);
+	cout << "show 'tripulantes'";
+	c.gotoxy(84, 8);
+	cout << "move 'id tripulante' 'pos sala dest'";
+}
+

@@ -3,7 +3,7 @@
 SuporteVida::SuporteVida(int id, string nome, int posicao, int x, int y) : Sala(id, nome, posicao, x, y){}		// contrutor
 SuporteVida::~SuporteVida(void){}			//destrutor
 
-
+SuporteVida::SuporteVida(){}
 //------GET---------
 int SuporteVida::getId(void){
 	return this->id;

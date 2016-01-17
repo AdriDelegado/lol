@@ -2,7 +2,7 @@
 
 Maquina::Maquina(int id, string nome, int posicao, int x, int y) : Sala(id, nome, posicao, x, y){	}	//contrutor
 
-
+Maquina::Maquina(){}
 Maquina::~Maquina(void){}					//destrutor
 
 //------GET---------

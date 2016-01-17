@@ -28,7 +28,7 @@ protected:
 
 public:
 	Sala(int id, string nome, int posicao, int x, int y);
-	
+	Sala();
 	virtual ~Sala(void);
 
 

@@ -4,7 +4,7 @@ Beliche::Beliche(int id,string nome,int posicao,int x,int y) : Sala(id, nome, po
 	this->numeroBeliches = 0;
 	
 }
-
+Beliche::Beliche(){}
 Beliche::~Beliche(void){}				//destrutor
 
 //------GET---------

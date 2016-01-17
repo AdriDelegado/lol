@@ -14,7 +14,7 @@ class Propulsor : public Sala
 public:
 	Propulsor(int id, string nome, int posicao, int x, int y);				//contrutor por defeito
 	~Propulsor(void);			//destrutor
-
+	Propulsor(void);
 	//------GET---------
 	int getNivelPropulsor();
 

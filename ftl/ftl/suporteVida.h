@@ -14,7 +14,7 @@ public:
 
 	SuporteVida(int id, string nome, int posicao, int x, int y);				//contrutor por defeito
 	~SuporteVida(void);			//destrutor
-
+	SuporteVida();
 	//------GET---------
 	int getId();
 	int getOxigenio();

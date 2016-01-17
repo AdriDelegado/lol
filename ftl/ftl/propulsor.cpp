@@ -5,6 +5,7 @@ Propulsor::Propulsor(int id, string nome, int posicao, int x, int y) :Sala(id, n
 	this->nivelPropulsor = 100;
 }
 
+Propulsor::Propulsor(){}
 Propulsor::~Propulsor(void){}			//destrutor
 
 int Propulsor::getNivelPropulsor(){

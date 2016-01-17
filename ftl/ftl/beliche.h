@@ -14,7 +14,7 @@ class Beliche : public Sala
 
 public:
 	Beliche(int id, string nome, int posicao, int x, int y);						//construtor por defeito
-	
+	Beliche();
 	~Beliche(void);					//destrutor
 
 	//------GET---------

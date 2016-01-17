@@ -5,7 +5,7 @@ ControloEscudo::ControloEscudo(int id, string nome, int posicao, int x, int y) :
 	this->nivelEscudoActual = 100;
 	
 }
-
+ControloEscudo::ControloEscudo(){}
 ControloEscudo::~ControloEscudo(void){}								//destrutor
 
 //-------------GET-------------------------

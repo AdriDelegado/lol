@@ -14,7 +14,7 @@ class Ponte : public Sala
 public:
 	Ponte(int id, string nome, int posicao, int x, int y);				//contrutor por defeito
 	~Ponte(void);			//destrutor
-
+	Ponte();
 	//------GET---------
 	int getId();
 	int getOxigenio();

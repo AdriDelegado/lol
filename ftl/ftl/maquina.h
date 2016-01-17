@@ -13,7 +13,7 @@ class Maquina : public Sala{
 public:
 	Maquina(int id, string nome, int posicao, int x, int y);							//contrutor por defeito
 	~Maquina(void);					//destrutor
-
+	Maquina();
 	//------GET---------
 	int getId();
 	int getOxigenio();

@@ -15,7 +15,7 @@ Sala::Sala(int id, string nome, int posicao,int x, int y){
 	this->numeroOcupantes = 0;
 	this->posicao = posicao;
 }
-
+Sala::Sala(){}
 Sala::~Sala(void){}
 
 

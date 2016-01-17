@@ -110,11 +110,6 @@ void jogo::repararIntegridade(SpaceShip &apolo1){
 						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " foi reparada";
 						l++;
 					}
-					else{
-						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
-						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " nao precisa de reparo";
-						l++;
-					}
 				}
 			}
 		}
@@ -124,13 +119,8 @@ void jogo::repararIntegridade(SpaceShip &apolo1){
 				if (apolo1.getRooms().at(i)->getPosicao() == v->getIdSala()){
 					if (apolo1.getRooms().at(i)->getIntegridade() < 100){
 						apolo1.getRooms().at(i)->setIntegridade(apolo1.getRooms().at(i)->getIntegridade() + v->getReparador()); // falta validar se a integridade ultrapassa de 100
-						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
+						cons.gotoxy(84, 4 + l); // posicçao da introduçao dos camandos
 						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " foi reparada";
-						l++;
-					}
-					else{
-						cons.gotoxy(84, 4+l); // posicçao da introduçao dos camandos
-						cout << "sala " << apolo1.getRooms().at(i)->getPosicao() << " nao precisa de reparo";
 						l++;
 					}
 				}
@@ -140,37 +130,61 @@ void jogo::repararIntegridade(SpaceShip &apolo1){
 }
 
 void jogo::eventos(SpaceShip &apolo1){
-	random_device rd;
-	mt19937 mt(rd());
-	uniform_int_distribution<int> dist(1, 100);
-	if (dist(mt) > 50){
-		eventoCampoPoCosmico(apolo1);
-	}
+	eventoCampoPoCosmico(apolo1);
+	
 }
 
 void jogo::eventoCampoPoCosmico(SpaceShip &apolo1){
-	random_device rd;
-	mt19937 mt(rd());
-	uniform_int_distribution<int> dist(0, 11);
-	for (int i = 0; i < 5; i++){
-		if (dist(mt) == 0 ){
-			Propulsor *p = (Propulsor*)apolo1.getRooms().at(dist(mt));
-			p->setNivelPropulsor(p->getNivelPropulsor() - 10);
-			p->setIntegridade(p->getIntegridade() - 10);
-			apolo1.getRooms().erase(apolo1.getRooms().begin());
-			apolo1.setRooms(*p);
+	int l = 0;
+	int val = apolo1.getRooms().size()-1;
+
+	Consola cons;
+	random_device rd2;
+	mt19937 mt2(rd2());
+	cons.gotoxy(84, 4); // posicçao da introduçao dos camandos
+	cout << "Po Cosmico";
+	uniform_int_distribution<int> dist2(4, 5);
+	int y = dist2(mt2);
+	for (int i = 0; i < y; i++){
+
+		uniform_int_distribution<int> dist3(0, val);
+		int c = dist3(mt2);
+		for (int x = 0; x != apolo1.getRooms().size(); x++){
+
+			if (apolo1.getRooms().at(x)->getPosicao() == c){
+
+				if (apolo1.getRooms().at(x)->getPosicao() == 0){
+					Propulsor *p = (Propulsor*)apolo1.getRooms().at(c);
+					p->setNivelPropulsor(p->getNivelPropulsor() - 10);
+					p->setIntegridade(p->getIntegridade() - 10);
+					apolo1.getRooms().erase(apolo1.getRooms().begin() + x);
+					apolo1.setRooms(*p);
+
+					cons.gotoxy(84, 10 + l); // posicçao da introduçao dos camandos
+					cout<<"sala " << c + 1 << " danificada";
+					l++;
+				}
+				else if (apolo1.getRooms().at(i)->getPosicao() == 9){
+					Propulsor *p = (Propulsor*)apolo1.getRooms().at(c);
+					p->setNivelPropulsor(p->getNivelPropulsor() - 10);
+					p->setIntegridade(p->getIntegridade() - 10);
+					apolo1.getRooms().erase(apolo1.getRooms().begin() + x);
+					apolo1.setRooms(*p);
+					cons.gotoxy(84, 10 + l); // posicçao da introduçao dos camandos
+
+					cout << "sala " << c + 1 << " danificada";
+					l++;
+				}
+				else{
+					apolo1.getRooms().at(x)->setIntegridade(apolo1.getRooms().at(x)->getIntegridade() - 10);
+					cons.gotoxy(84, 10 + l); // posicçao da introduçao dos camandos
+
+					cout << "sala " << c + 1 << " danificada";
+					l++;
+				}
+			}
+
 		}
-		else if (dist(mt) == 5){
-			Propulsor *p = (Propulsor*)apolo1.getRooms().at(dist(mt));
-			p->setNivelPropulsor(p->getNivelPropulsor() - 10);
-			p->setIntegridade(p->getIntegridade() - 10);
-			apolo1.getRooms().erase(apolo1.getRooms().begin()+5);
-			apolo1.setRooms(*p);
-		}
-		else{
-			apolo1.getRooms().at(dist(mt))->setIntegridade(apolo1.getRooms().at(dist(mt))->getIntegridade() - 10);
-		}
-		
 	}
 }
 //------------SET------------------

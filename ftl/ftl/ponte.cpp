@@ -2,7 +2,7 @@
 
 Ponte::Ponte(int id, string nome, int posicao, int x, int y) :Sala(id, nome, posicao, x, y){}			//contrutor
 Ponte::~Ponte(void){}			//destrutor
-
+Ponte::Ponte(){}
 //------GET---------
 int Ponte::getId(void){
 	return id;

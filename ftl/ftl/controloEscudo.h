@@ -15,7 +15,7 @@ class ControloEscudo : public Sala{
 public:
 	ControloEscudo(int id, string nome, int posicao, int x, int y);		//contrutor
 	~ControloEscudo(void);								//destrutor
-
+	ControloEscudo();
 	//------GET---------
 	virtual	int getNivelEscudo();
 	virtual int getNivelEscudoActual();

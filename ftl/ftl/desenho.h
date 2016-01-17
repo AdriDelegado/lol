@@ -24,6 +24,8 @@ public:
 	void DesenhoSala();
 	void escreveNomeSala(string nome, int posicao);
 	void desenhaTripulante(string nome, int posicao,int posA);
+	void escreveComandos();
+	
 };
 
 #endif
